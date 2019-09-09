@@ -24,7 +24,7 @@
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/nvidia-smi-c.jpg">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/frp-architecture.png">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/snapshot.jpg">
-<meta property="og:updated_time" content="2019-09-09T23:17:16.094Z">
+<meta property="og:updated_time" content="2019-09-09T23:22:11.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Creating Shared GPU Server Based On LXD Containers">
 <meta name="twitter:description" content="PrefaceOur lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice featu">
@@ -124,7 +124,7 @@
 <li>Would you like to use an existing block device? (yes/no) [default=no]: yes  </li>
 <li>Path to the existing block device: /your/partition</li>
 </ul>
-<p>One thing to note - If your disk/partition is currently formatted and mounted on the system, it will need to be unmounted with <code>sudo umount /path/to/mountpoint</code> before continuing, or LXD will error during configuration. Additionally if there’s an <code>fstab</code> entry this will need to be removed before continuing, otherwise you’ll see mount errors when you next reboot.<sup><a href="#beaware">1</a></sup>  </p>
+<p>One thing to note - If your disk/partition is currently formatted and mounted on the system, it will need to be unmounted with <code>sudo umount /path/to/mountpoint</code> before continuing, or LXD will error during configuration. Additionally if there’s an <code>fstab</code> entry this will need to be removed before continuing, otherwise you’ll see mount errors when you next reboot.<sup id="a1"><a href="#beaware">1</a></sup>  </p>
 <hr>
 <h2 id="Creating-the-Template"><a href="#Creating-the-Template" class="headerlink" title="Creating the Template"></a>Creating the Template</h2><h3 id="Downloading-the-Image-and-Creating-a-Container"><a href="#Downloading-the-Image-and-Creating-a-Container" class="headerlink" title="Downloading the Image and Creating a Container"></a>Downloading the Image and Creating a Container</h3><p>In terminal, list the available images,</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo lxc image list images:</span><br></pre></td></tr></table></figure>
@@ -136,7 +136,7 @@
 <ul>
 <li>Use <code>sudo lxc list</code> to see the images<br><img src="sudo-lxc-list.jpg" alt></li>
 <li>Use <code>sudo lxc exec &lt;ContainerTemplateName&gt; bash</code> to access the root bash of the container. Switch to standard user <code>ubuntu</code> using <code>su ubuntu</code>  </li>
-<li>Note - if the container throws the error <code>sudo: no tty present and no askpass program specified</code>, then edit the file <code>/etc/sudoers</code>, and add <code>ubuntu ALL=(ALL) NOPASSWD:ALL</code> to the end of the file<sup><a href="#notty">2</a></sup>.  </li>
+<li>Note - if the container throws the error <code>sudo: no tty present and no askpass program specified</code>, then edit the file <code>/etc/sudoers</code>, and add <code>ubuntu ALL=(ALL) NOPASSWD:ALL</code> to the end of the file<sup id="a2"><a href="#notty">2</a></sup>.  </li>
 </ul>
 <h3 id="Creating-Shared-Directory-and-Sharing-the-GPU"><a href="#Creating-Shared-Directory-and-Sharing-the-GPU" class="headerlink" title="Creating Shared Directory and Sharing the GPU"></a>Creating Shared Directory and Sharing the GPU</h3><h4 id="Shared-Directory-Configuration"><a href="#Shared-Directory-Configuration" class="headerlink" title="Shared Directory Configuration"></a>Shared Directory Configuration</h4><p>This is for R/W within the container. If only read permission is suffientm just run</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Set shared directory，&lt;shareName&gt; is the virtual device name of your wish, &lt;path1&gt; is the shared directory under the host，&lt;path2&gt; is the shared directory under the container that already exsists</span><br><span class="line"></span><br><span class="line">sudo lxc config device add &lt;ContainerTemplateName&gt; &lt;shareName&gt; disk source=&lt;path1&gt; path=&lt;path2&gt;</span><br></pre></td></tr></table></figure>
@@ -169,7 +169,7 @@
 
 <p>Check that we can log in successfully.</p>
 <hr>
-<h2 id="Container-Remote-Access-Through-frp"><a href="#Container-Remote-Access-Through-frp" class="headerlink" title="Container Remote Access Through frp"></a>Container Remote Access Through frp</h2><h3 id="Why-this-part"><a href="#Why-this-part" class="headerlink" title="Why this part?"></a>Why this part?</h3><p>The reason is though we have successfully configured SSH login, it could only be done on the host machine - which defeats the purpose of this article. Thus we need to configure it such that the connection can “pass through” the host and remote machines can access it. frp is an excellent tool for this purpose. Below is a graph to illustrate the process from their GitHub<sup><a href="#frp">3</a></sup>.<br><img src="frp-architecture.png" alt>  </p>
+<h2 id="Container-Remote-Access-Through-frp"><a href="#Container-Remote-Access-Through-frp" class="headerlink" title="Container Remote Access Through frp"></a>Container Remote Access Through frp</h2><h3 id="Why-this-part"><a href="#Why-this-part" class="headerlink" title="Why this part?"></a>Why this part?</h3><p>The reason is though we have successfully configured SSH login, it could only be done on the host machine - which defeats the purpose of this article. Thus we need to configure it such that the connection can “pass through” the host and remote machines can access it. frp is an excellent tool for this purpose. Below is a graph to illustrate the process from their GitHub<sup id="a3"><a href="#frp">3</a></sup>.<br><img src="frp-architecture.png" alt>  </p>
 <h3 id="Installing-frp"><a href="#Installing-frp" class="headerlink" title="Installing frp"></a>Installing frp</h3><p>Download the latest release from <a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener">here</a>, unzip it to <code>/opt/</code>, and the path should be <code>/opt/frp_x.xx.x_linux_amd64/</code>. The files of interest are:</p>
 <ul>
 <li>frps.ini : server configuration (for host)</li>
@@ -215,13 +215,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo lxc restore &lt;ContainerName&gt; &lt;snapshot-name&gt;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="Sources"><a href="#Sources" class="headerlink" title="Sources"></a>Sources</h2><p>These sources helped me immensely in this project. Many thanks to these kind people, especially Shen<sup><a href="#gpu-server-lab">4</a></sup> and Ewen<sup><a href="#frp-service">5</a></sup></p>
-<p><a name="beaware">1</a> : <a href="https://bayton.org/docs/linux/lxd/lxd-zfs-and-bridged-networking-on-ubuntu-16-04-lts/#be-aware" target="_blank" rel="noopener">Be Aware</a><br><a name="notty">2</a> : <a href="https://askubuntu.com/questions/1113503/ubuntu-18-04-sudo-no-tty-present-and-no-askpass-program-specified" target="_blank" rel="noopener">Sudo Issue</a><br><a name="frp">3</a> : <a href="https://github.com/fatedier/frp" target="_blank" rel="noopener">frp</a><br><a name="gpu-server-lab">4</a> : <a href="https://shenxiaohai.me/2018/12/03/gpu-server-lab/" target="_blank" rel="noopener">gpu-server-lab</a><br><a name="frp-service">5</a> : <a href="https://blog.csdn.net/sinat_29963957/article/details/83591264" target="_blank" rel="noopener">frp-service</a>  </p>
+<h2 id="Sources"><a href="#Sources" class="headerlink" title="Sources"></a>Sources</h2><p>These sources helped me immensely in this project. Many thanks to these kind people, especially Shen<sup id="a4"><a href="#gpu-server-lab">4</a></sup> and Ewen<sup id="a5"><a href="#frp-service">5</a></sup></p>
+<p><a name="beaware">1</a> : <a href="https://bayton.org/docs/linux/lxd/lxd-zfs-and-bridged-networking-on-ubuntu-16-04-lts/#be-aware" target="_blank" rel="noopener">Be Aware</a> <a href="#a1">↩</a><br><a name="notty">2</a> : <a href="https://askubuntu.com/questions/1113503/ubuntu-18-04-sudo-no-tty-present-and-no-askpass-program-specified" target="_blank" rel="noopener">Sudo Issue</a> <a href="#a2">↩</a><br><a name="frp">3</a> : <a href="https://github.com/fatedier/frp" target="_blank" rel="noopener">frp</a> <a href="#a3">↩</a><br><a name="gpu-server-lab">4</a> : <a href="https://shenxiaohai.me/2018/12/03/gpu-server-lab/" target="_blank" rel="noopener">gpu-server-lab</a> <a href="#a4">↩</a><br><a name="frp-service">5</a> : <a href="https://blog.csdn.net/sinat_29963957/article/details/83591264" target="_blank" rel="noopener">frp-service</a> <a href="#a5">↩</a>  </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0d10fg10000amxlq7tfpss5" class="article-share-link">Share</a>
+      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0d16rq80000ctxls3kupcya" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li></ul>
