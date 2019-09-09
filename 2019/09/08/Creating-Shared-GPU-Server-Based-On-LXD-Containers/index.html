@@ -24,7 +24,7 @@
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/nvidia-smi-c.jpg">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/frp-architecture.png">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/snapshot.jpg">
-<meta property="og:updated_time" content="2019-09-09T23:24:54.821Z">
+<meta property="og:updated_time" content="2019-09-09T23:40:29.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Creating Shared GPU Server Based On LXD Containers">
 <meta name="twitter:description" content="PrefaceOur lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice featu">
@@ -102,6 +102,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>Our lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice features such as container isolation, access to GPUs, instant deployment and control over resources.</p>
+<a id="more"></a>
+
 <p>Note - all &lt;…&gt; in this article are to be replaced with actual content in installation and configuration unless stated otherwise. For example, &lt;your ip&gt; would be replaced as 198.12.2.1, that is, your ip.</p>
 <hr>
 <h2 id="System-and-Driver-Installation"><a href="#System-and-Driver-Installation" class="headerlink" title="System and Driver Installation"></a>System and Driver Installation</h2><h3 id="Linux-Installation"><a href="#Linux-Installation" class="headerlink" title="Linux Installation"></a>Linux Installation</h3><p>I chose to use Ubuntu 18.04 (Bionic Beaver) as the host system as it defaults to installing LXD 3.0, which supports GPUs in containers. The installation itself is trivial, one thing to note however is that during or after installation, we need to create a ext4 partition that is not mounted to anything, and note down its block name (normally /dev/sdax,/dev/sdbx, etc) as we will need this space to store the containers later. The screenshot below is a 5TB HDD in one partition (this is where containers are stored).<br><img src="partition.jpg" alt></p>
@@ -221,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0d1nr8v0001pmxlpgsseih1" class="article-share-link">Share</a>
+      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0d1ubyp0001qnxl5bh432e4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li></ul>
