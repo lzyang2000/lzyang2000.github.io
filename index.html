@@ -107,7 +107,48 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><hr>
+        <!-- toc -->
+
+<ul>
+<li><a href="#preface">Preface</a></li>
+<li><a href="#system-and-driver-installation">System and Driver Installation</a><ul>
+<li><a href="#linux-installation">Linux Installation</a></li>
+<li><a href="#gpu-driver-installation">GPU Driver Installation</a></li>
+</ul>
+</li>
+<li><a href="#lxd-installation-and-configuration">LXD Installation and Configuration</a><ul>
+<li><a href="#lxd-installation">LXD Installation</a></li>
+<li><a href="#lxd-configuration">LXD Configuration</a></li>
+</ul>
+</li>
+<li><a href="#creating-the-template">Creating the Template</a><ul>
+<li><a href="#downloading-the-image-and-creating-a-container">Downloading the Image and Creating a Container</a></li>
+<li><a href="#creating-shared-directory-and-sharing-the-gpu">Creating Shared Directory and Sharing the GPU</a><ul>
+<li><a href="#shared-directory-configuration">Shared Directory Configuration</a></li>
+<li><a href="#shared-gpu-configuration">Shared GPU Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#container-ssh-access">Container SSH Access</a><ul>
+<li><a href="#configuring-ssh-login">Configuring SSH login</a></li>
+<li><a href="#testing-ssh">Testing SSH</a></li>
+</ul>
+</li>
+<li><a href="#container-remote-access-through-frp">Container Remote Access Through frp</a><ul>
+<li><a href="#why-this-part">Why this part?</a></li>
+<li><a href="#installing-frp">Installing frp</a></li>
+<li><a href="#configuring-frp">Configuring frp</a></li>
+<li><a href="#configuring-frp-to-auto-start-when-booting-the-host-and-launching-the-container">Configuring frp to auto start when booting the host and launching the container</a></li>
+<li><a href="#connection">Connection</a></li>
+</ul>
+</li>
+<li><a href="#creating-deploying-new-containers">Creating &amp; Deploying New Containers</a></li>
+<li><a href="#sources">Sources</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><hr>
 <p>Our lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice features such as container isolation, access to GPUs, instant deployment and control over resources.</p>
         
           <p class="article-more-link">
@@ -117,7 +158,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0eavs8f00018mxlqsegck9k" class="article-share-link">Share</a>
+      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0eb1ma00001a3xlt4lv2r7x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li></ul>
