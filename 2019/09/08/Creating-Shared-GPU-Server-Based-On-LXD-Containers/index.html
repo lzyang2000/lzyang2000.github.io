@@ -20,13 +20,13 @@ ga('send', 'pageview');
   
   <title>Creating Shared GPU Server Based On LXD Containers | LIZHI&#39;S BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Preface System and Driver Installation Linux Installation GPU Driver Installation   LXD Installation and Configuration LXD Installation LXD Configuration   Creating the Template Downloading the Ima">
+  <meta name="description" content="Preface Our lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice feat">
 <meta name="keywords" content="AI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Creating Shared GPU Server Based On LXD Containers">
 <meta property="og:url" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/index.html">
 <meta property="og:site_name" content="LIZHI&#39;S BLOG">
-<meta property="og:description" content="Preface System and Driver Installation Linux Installation GPU Driver Installation   LXD Installation and Configuration LXD Installation LXD Configuration   Creating the Template Downloading the Ima">
+<meta property="og:description" content="Preface Our lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice feat">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/partition.jpg">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/driver-installation.jpg">
@@ -37,10 +37,10 @@ ga('send', 'pageview');
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/nvidia-smi-c.jpg">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/frp-architecture.png">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/snapshot.jpg">
-<meta property="og:updated_time" content="2019-09-10T20:45:50.386Z">
+<meta property="og:updated_time" content="2019-09-10T20:46:27.392Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Creating Shared GPU Server Based On LXD Containers">
-<meta name="twitter:description" content="Preface System and Driver Installation Linux Installation GPU Driver Installation   LXD Installation and Configuration LXD Installation LXD Configuration   Creating the Template Downloading the Ima">
+<meta name="twitter:description" content="Preface Our lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice feat">
 <meta name="twitter:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/partition.jpg">
   
   
@@ -116,10 +116,15 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- toc -->
+        <h2><span id="preface">Preface</span></h2><hr>
+<p>Our lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice features such as container isolation, access to GPUs, instant deployment and control over resources.</p>
+<a id="more"></a>
+
+<p>Note - all &lt;…&gt; in this article are to be replaced with actual content in installation and configuration unless stated otherwise. For example, &lt;your ip&gt; would be replaced as 198.12.2.1, that is, your ip.</p>
+<p>&nbsp;</p>
+<!-- toc -->
 
 <ul>
-<li><a href="#preface">Preface</a></li>
 <li><a href="#system-and-driver-installation">System and Driver Installation</a><ul>
 <li><a href="#linux-installation">Linux Installation</a></li>
 <li><a href="#gpu-driver-installation">GPU Driver Installation</a></li>
@@ -157,11 +162,6 @@ ga('send', 'pageview');
 </ul>
 <!-- tocstop -->
 
-<h2><span id="preface">Preface</span></h2><hr>
-<p>Our lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice features such as container isolation, access to GPUs, instant deployment and control over resources.</p>
-<a id="more"></a>
-
-<p>Note - all &lt;…&gt; in this article are to be replaced with actual content in installation and configuration unless stated otherwise. For example, &lt;your ip&gt; would be replaced as 198.12.2.1, that is, your ip.</p>
 <p>&nbsp;</p>
 <h2><span id="system-and-driver-installation">System and Driver Installation</span></h2><hr>
 <h3><span id="linux-installation">Linux Installation</span></h3><p>I chose to use Ubuntu 18.04 (Bionic Beaver) as the host system as it defaults to installing LXD 3.0, which supports GPUs in containers. The installation itself is trivial, one thing to note however is that during or after installation, we need to create a ext4 partition that is not mounted to anything, and note down its block name (normally /dev/sdax,/dev/sdbx, etc) as we will need this space to store the containers later. The screenshot below is a 5TB HDD in one partition (this is where containers are stored).<br><img src="partition.jpg" alt></p>
@@ -287,7 +287,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0eb1ma00001a3xlt4lv2r7x" class="article-share-link">Share</a>
+      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0eb2d310001bcxllcz1b0jb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li></ul>
