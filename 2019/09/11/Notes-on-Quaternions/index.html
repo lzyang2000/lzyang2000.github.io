@@ -15,19 +15,20 @@
 <!-- End Google Analytics -->
 
   
-  <title>Category: DevOps | LIZHI&#39;S BLOG</title>
+  <title>Notes on Quaternions | LIZHI&#39;S BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Lizhi Yang&apos;s personal blog">
-<meta name="keywords" content="Gary, Lizhi, Yang, Hexo, Github">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LIZHI&#39;S BLOG">
-<meta property="og:url" content="http://lzyang2000.github.io/categories/Machine-Learning/DevOps/index.html">
+  <meta name="description" content="Table of Content   Why Quaternions? - Euler Angle Singularities How Do Quaternions Work? Quaternion Basics Unit quaternion1   Sources">
+<meta name="keywords" content="Class Notes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes on Quaternions">
+<meta property="og:url" content="http://lzyang2000.github.io/2019/09/11/Notes-on-Quaternions/index.html">
 <meta property="og:site_name" content="LIZHI&#39;S BLOG">
-<meta property="og:description" content="Lizhi Yang&apos;s personal blog">
+<meta property="og:description" content="Table of Content   Why Quaternions? - Euler Angle Singularities How Do Quaternions Work? Quaternion Basics Unit quaternion1   Sources">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-11T23:55:48.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LIZHI&#39;S BLOG">
-<meta name="twitter:description" content="Lizhi Yang&apos;s personal blog">
+<meta name="twitter:title" content="Notes on Quaternions">
+<meta name="twitter:description" content="Table of Content   Why Quaternions? - Euler Angle Singularities How Do Quaternions Work? Quaternion Basics Unit quaternion1   Sources">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -97,41 +98,96 @@
 </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" class="archive-article-date">
-  <time datetime="2019-09-09T06:12:59.000Z" itemprop="datePublished">Sep 8</time>
+        <section id="main"><article id="post-Notes-on-Quaternions" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/11/Notes-on-Quaternions/" class="article-date">
+  <time datetime="2019-09-11T23:14:46.419Z" itemprop="datePublished">2019-09-11</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Robotics/">Robotics</a>►<a class="article-category-link" href="/categories/Robotics/Theory/">Theory</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/">Creating Shared GPU Server Based On LXD Containers</a>
+    <h1 class="article-title" itemprop="name">
+      Notes on Quaternions
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2><span id="table-of-content">Table of Content</span></h2><!-- toc -->
+
+<ul>
+<li><a href="#why-quaternions-euler-angle-singularities">Why Quaternions? - Euler Angle Singularities</a></li>
+<li><a href="#how-do-quaternions-work">How Do Quaternions Work?</a><ul>
+<li><a href="#quaternion-basics">Quaternion Basics</a></li>
+<li><a href="#unit-quaternionsup-ida11booksup">Unit quaternion<sup id="a1"><a href="#book">1</a></sup></a></li>
+</ul>
+</li>
+<li><a href="#sources">Sources</a></li>
+</ul>
+<!-- tocstop -->
+
+<a id="more"></a>
+
+<h2><span id="why-quaternions-euler-angle-singularities">Why Quaternions? - Euler Angle Singularities</span></h2><hr>
+<p>Let $\hat\omega$ be the skew symmetric matrix such that<br>$$\omega = \begin{bmatrix} \omega_1 \\ \omega_2 \\ \omega_3 \end{bmatrix}, \hat\omega = \begin{bmatrix} 0 &amp; -\omega_3 &amp; \omega_2 \\ \omega_3 &amp; 0 &amp; -\omega_1 \\ -\omega_2 &amp; \omega_1 &amp; 0 \end{bmatrix}$$<br>so $\omega \times p = \hat\omega \bullet p$ .</p>
+<p>Thus, consider a simple case of ZYX euler angle rotation with $ \theta=-\frac{\pi}{2} $(intrinsic rotation, right multiply):<br>$$R_{ab}=R_{\mathbf{z}}(\psi)R_{\mathbf{y}}(\theta)R_{\mathbf{x}}(\phi)=e^{\mathbf{\hat z}\psi}e^{\mathbf{\hat y}\theta}e^{\mathbf{\hat x}\phi}  = \\  \begin{bmatrix} cos \psi &amp; -sin \psi &amp; 0 \\ sin \psi &amp; cos \psi &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \bullet \begin{bmatrix} cos \theta &amp; 0 &amp; sin \theta \\ 0 &amp; 1 &amp; 0 \\ -sin \theta &amp; 0 &amp; cos \theta \end{bmatrix}  \bullet \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; cos \phi &amp; -sin \phi \\ 0 &amp; sin \phi &amp; cos \phi \end{bmatrix} = \\ \begin{bmatrix} cos \psi &amp; -sin \psi &amp; 0 \\ sin \psi &amp; cos \psi &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \bullet \begin{bmatrix} 0 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \end{bmatrix}  \bullet \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; cos \phi &amp; -sin \phi \\ 0 &amp; sin \phi &amp; cos \phi \end{bmatrix} = \\ \begin{bmatrix} cos \psi &amp; -sin \psi &amp; 0 \\ sin \psi &amp; cos \psi &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \bullet \begin{bmatrix} 0 &amp; -sin \phi &amp; -cos \phi \\ 0 &amp; cos \phi &amp; -sin \phi \\ 1 &amp; 0 &amp; 0 \end{bmatrix}= \\ \begin{bmatrix} 0 &amp; -sin \phi cos \psi - sin \psi cos \phi &amp; -cos \phi cos \psi + sin \phi \sin \psi \\ 0 &amp; - sin \phi \sin \psi +cos \psi cos \phi &amp; -cos \phi sin \psi - sin \phi cos \psi \\ 1 &amp; 0 &amp; 0 \end{bmatrix} $$<br>Here we see that $ \phi $ and $ \psi $ are equivalent, such that for every  $ \phi = a $ and $ \psi = b $ ,  $ \phi = b $ and $ \psi = a $ also satisfies the rotation. Thus we have a singularity, as there is no determined way of rotation.</p>
+<h2><span id="how-do-quaternions-work">How Do Quaternions Work?</span></h2><hr>
+<h3><span id="quaternion-basics">Quaternion Basics</span></h3><p>Formally, a quaternion is a vector quantity of the form<br>$$ Q =q_0+q_1 \mathbf{i} + q_2 \mathbf{j} +q_3 \mathbf{k} $$ where $ q_0 $ is the <em>scalar</em> component of $ Q $ and $ \vec q = q_1 \mathbf{i} + q_2 \mathbf{j} +q_3 \mathbf{k} $ is the <em>vector</em> component. $ Q $ can be expressed as $ Q = (q_0,\vec q) $ . $ i , j , k $ satisfies the relations<br>$$ a\mathbf{i} = \mathbf{i}a , a\mathbf{j} = \mathbf{j}a , a\mathbf{k} = \mathbf{k}a , a \in \mathbb{R} \\ \mathbf{i} \bullet \mathbf{i} = \mathbf{j} \bullet \mathbf{j} = \mathbf{i} \bullet \mathbf{k} = \mathbf{i} \bullet \mathbf{j} \bullet \mathbf{k} = -1 \\ \mathbf{i} \bullet \mathbf{j} = -\mathbf{j} \bullet \mathbf{i} = \mathbf{k} , \mathbf{j} \bullet \mathbf{k} = -\mathbf{k} \bullet \mathbf{j} = \mathbf{i} , \mathbf{k} \bullet \mathbf{i} = -\mathbf{i} \bullet \mathbf{k} = \mathbf{j} $$<br>The conjugate of $ Q = (q_0, \vec q) $ is $ Q^{\ast} = (q_0, -\vec q) $ , and the magnitude satisfies<br>$$ ||Q||^{2} = Q \bullet Q^{\ast}= {q_0}^{2} + {q_1}^{2} + {q_2}^{2} + {q_3}^{2} $$<br>Thus $$ Q \bullet Q^{-1} = 1 = \frac{||Q||^{2}}{||Q||^{2}} = \frac{Q \bullet Q^{\ast}}{||Q||^{2}} \\ Q^{-1} = Q^{\ast} / ||Q||^{2} $$ and $ Q = (1,0) $ is the identity (it is essentially the scalar 1).</p>
+<p>Suppose there are 2 quaternios $ Q = (q_0, \vec q) $ and $ P = (p_0, \vec p) $ . Thus<br>$$ Q \bullet P = (q_0 p_0 - \vec q \bullet \vec p, q_0 \vec p + p_0 \vec q + \vec q \times \vec p) $$</p>
+<h3><span id="unit-quaternion1">Unit quaternion<sup id="a1"><a href="#book">1</a></sup></span></h3><p>Given rotation matrix $ R = e^{\hat \omega \theta} $ , the associated unit quaternion is<br>$$ Q = (cos \frac{\theta}{2}, \omega sin \frac{\theta}{2}) $$<br>where $ \omega $ is the rotation axis and $ \theta $ is the rotation angle. They satisfy<br>$$ Q_{ac} = Q_{ab} \bullet Q_{bc} $$ where ac, ab, bc are from frame A to C, A to B, B to C respectively. Thus given a unit quaternion $ Q = (q_0, \vec q) $, we have<br>$$ \theta = 2 cos^{-1} q_0 \\ \omega = \Biggl\lbrace^{\frac{\vec q}{sin (\theta / 2)} , \; \text{if} \; \theta \neq 0}_{0 , \; \text{otherwise}}  $$<br>such that $ R = e^{\hat \omega \theta} $</p>
+<p>For more details, see <a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation" target="_blank" rel="noopener">wiki link</a>.</p>
+<h2><span id="sources">Sources</span></h2><hr>
+<p><a name="beaware">1</a> : <a href="https://books.google.com/books?id=jQZDDwAAQBAJ&dq=A+Mathematical+Introduction+to+Robotic+Manipulation" target="_blank" rel="noopener">A Mathematical Introduction to Robotic Manipulation
+</a> P.33-34 <a href="#a1">↩</a>  </p>
+<p><br> Author - Lizhi Yang <br> Article Link - <a href="http://lzyang2000.github.io/2019/09/11/Notes-on-Quaternions/">http://lzyang2000.github.io/2019/09/11/Notes-on-Quaternions/</a> <br> Copyright - This article is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> license unless specified otherwise. Please specify the origin if reproduce.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lzyang2000.github.io/2019/09/11/Notes-on-Quaternions/" data-id="ck0fxb6m40001iwxlib2abwxr" data-title="Notes on Quaternions" class="article-share-link">Share</a>
+      
+      
+        <a href="/2019/09/11/Notes-on-Quaternions/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2019/09/11/Notes-on-Quaternions/" itemprop="commentCount"></span>
+          Comments
+        </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Class-Notes/">Class Notes</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Creating Shared GPU Server Based On LXD Containers</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
+
+  <section id="comments" class="vcomment">
+
+  </section>
 </section>
         
           <aside id="sidebar">
