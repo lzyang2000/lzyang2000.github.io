@@ -3,23 +3,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-147598788-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
   
   <title>Archives: 2019 | LIZHI&#39;S BLOG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Gary Yang&apos;s personal blog">
 <meta name="keywords" content="Gary, Lizhi, Yang, Hexo, Github">
 <meta property="og:type" content="website">
@@ -39,8 +25,11 @@ ga('send', 'pageview');
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
 </head>
-</html>
+
 <body>
   <div id="container">
     <div id="wrap">
@@ -70,6 +59,7 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         
+        <!-- <a id="nav-search-btn" class="nav-icon" title="Search"></a> -->
         
         <a href="javascript:;" class="popup-trigger nav-icon" id="nav-search-btn"></a>
       </nav>
@@ -83,10 +73,8 @@ ga('send', 'pageview');
     <!-- <span class="search-icon">
       <i class="fa fa-search"></i>
     </span> -->
-    <span id="icon-search"></span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
+    <span id="search-icon"></span>
+    <!-- <span id="popup-btn-close"></span> -->
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
              placeholder="Search" spellcheck="false"
@@ -199,10 +187,11 @@ ga('send', 'pageview');
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2019 Lizhi Yang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -215,16 +204,38 @@ ga('send', 'pageview');
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery-3.4.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 <script src="/js/script.js"></script>
 
 
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "QlUS16IaskjvlGrrqsjbg0L3-MdYXbMMI# leancloud application app id",
+        appKey: "Cb1NNj7olkmHt4vqQSlVm3T1# leancloud application app key",
+        placeholder: "Comments are welcome",
+        pageSize:'10',
+        avatar:'mm',
+        lang:'en'
+    });
+</script>
 
   </div>
   
@@ -270,7 +281,7 @@ ga('send', 'pageview');
       // start loading animation
       $("body")
         .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<span id="icon-spinner"></span>' +
+          '<span id="search-loading-icon"></span>' +
           '</div>')
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
@@ -478,9 +489,9 @@ ga('send', 'pageview');
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<span id="icon-noresult"></span>'
+              resultContent.innerHTML = '<span id="no-result"></span>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<span id="icon-noresult"></span>'
+              resultContent.innerHTML = '<span id="no-result"></span>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
