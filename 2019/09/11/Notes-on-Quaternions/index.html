@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="LIZHI&#39;S BLOG">
 <meta property="og:description" content="Table of Content   Why Quaternions? - Euler Angle Singularities How Do Quaternions Work? Quaternion Basics Unit quaternion1   Sources">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-12T05:42:06.312Z">
+<meta property="og:updated_time" content="2019-09-12T05:56:37.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Notes on Quaternions">
 <meta name="twitter:description" content="Table of Content   Why Quaternions? - Euler Angle Singularities How Do Quaternions Work? Quaternion Basics Unit quaternion1   Sources">
@@ -148,14 +148,14 @@
 <h3><span id="unit-quaternion1">Unit quaternion<sup id="a1"><a href="#book">1</a></sup></span></h3><p>Given rotation matrix $ R = e^{\hat \omega \theta} $ , the associated unit quaternion is<br>$$ Q = (cos \frac{\theta}{2}, \omega sin \frac{\theta}{2}) $$<br>where $ \omega $ is the rotation axis and $ \theta $ is the rotation angle. They satisfy<br>$$ Q_{ac} = Q_{ab} \bullet Q_{bc} $$ where ac, ab, bc are from frame A to C, A to B, B to C respectively. Thus given a unit quaternion $ Q = (q_0, \vec q) $, we have<br>$$ \theta = 2 cos^{-1} q_0 \\ \omega = \Biggl\lbrace^{\frac{\vec q}{sin (\theta / 2)} , \; \text{if} \; \theta \neq 0}_{0 , \; \text{otherwise}}  $$<br>such that $ R = e^{\hat \omega \theta} $</p>
 <p>For more details, see <a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation" target="_blank" rel="noopener">wiki link</a>.</p>
 <h2><span id="sources">Sources</span></h2><hr>
-<p><a name="beaware">1</a> : <a href="https://books.google.com/books?id=jQZDDwAAQBAJ&dq=A+Mathematical+Introduction+to+Robotic+Manipulation" target="_blank" rel="noopener">A Mathematical Introduction to Robotic Manipulation
+<p><a name="book">1</a> : <a href="https://books.google.com/books?id=jQZDDwAAQBAJ&dq=A+Mathematical+Introduction+to+Robotic+Manipulation" target="_blank" rel="noopener">A Mathematical Introduction to Robotic Manipulation
 </a> P.33-34 <a href="#a1">↩</a>  </p>
 <p><br> Author - Lizhi Yang <br> Article Link - <a href="http://lzyang2000.github.io/2019/09/11/Notes-on-Quaternions/">http://lzyang2000.github.io/2019/09/11/Notes-on-Quaternions/</a> <br> Copyright - This article is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> license unless specified otherwise. Please specify the origin if reproduce.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lzyang2000.github.io/2019/09/11/Notes-on-Quaternions/" data-id="ck0g9oqdo0001jhxlmy3upb77" data-title="Notes on Quaternions" class="article-share-link">Share</a>
+      <a data-url="http://lzyang2000.github.io/2019/09/11/Notes-on-Quaternions/" data-id="ck0ga5uxv0001krxlrmh3axsl" data-title="Notes on Quaternions" class="article-share-link">Share</a>
       
       
         <a href="/2019/09/11/Notes-on-Quaternions/#comments" class="article-comment-link">
