@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/nvidia-smi-c.jpg">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/frp-architecture.png">
 <meta property="og:image" content="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/snapshot.jpg">
-<meta property="og:updated_time" content="2019-09-11T23:56:08.583Z">
+<meta property="og:updated_time" content="2019-09-13T07:41:11.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Creating Shared GPU Server Based On LXD Containers">
 <meta name="twitter:description" content="Preface Our lab recently purchased a few GPUs and I am tasked with installing them on a workstation. After some research on the web, I decided to go with the LXD container solution, offering nice feat">
@@ -270,7 +270,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=fraps service</span><br><span class="line">After=network.target network-online.target syslog.target</span><br><span class="line">Wants=network.target network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line"></span><br><span class="line">#command to start frp server</span><br><span class="line">ExecStart=/opt/frp_x.xx.x_linux_amd64/frps -c /opt/frp_x.xx.x_linux_amd64/frps.ini</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
 
 <p>Then run</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable frps</span><br><span class="line">sudo systemctl start frps</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">It is nearly the same with the frp client (the container).</span><br><span class="line">```terminal</span><br><span class="line"># this is in the container</span><br><span class="line"></span><br><span class="line">sudo vim /lib/systemd/system/frpc.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable frps</span><br><span class="line">sudo systemctl start frps</span><br></pre></td></tr></table></figure>
+
+<p>It is nearly the same with the frp client (the container).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># this is in the container</span><br><span class="line">sudo vim /lib/systemd/system/frpc.service</span><br></pre></td></tr></table></figure>
 
 <p>Populate it with </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=fraps service</span><br><span class="line">After=network.target network-online.target syslog.target</span><br><span class="line">Wants=network.target network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line"></span><br><span class="line">#command to start frp client</span><br><span class="line">ExecStart=/opt/frp_x.xx.x_linux_amd64/frpc -c /opt/frp_x.xx.x_linux_amd64/frpc.ini</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
@@ -304,7 +307,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0ga5uz10008krxli3bao7l5" data-title="Creating Shared GPU Server Based On LXD Containers" class="article-share-link">Share</a>
+      <a data-url="http://lzyang2000.github.io/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/" data-id="ck0htcqug0002lhxltkp12qdf" data-title="Creating Shared GPU Server Based On LXD Containers" class="article-share-link">Share</a>
       
       
         <a href="/2019/09/08/Creating-Shared-GPU-Server-Based-On-LXD-Containers/#comments" class="article-comment-link">
