@@ -24,14 +24,11 @@ hr {
 }
 
 table {
-  td,
-  th {
-    font-size: 1rem;
-    padding: 1px 1rem 1px 0;
+  td, th {
+    color: var(--global-text-color);
   }
-
-  th {
-    font-weight: bold;
+  td {
+    font-size: 1rem;
   }
 }
 
@@ -498,48 +495,21 @@ footer.sticky-bottom {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
-
-  .container {
-    text-align: center;
-  }
 }
 
 // CV
 
 .cv {
-  margin-bottom: 40px;
-  
   .card {
-    background-color: var(--global-card-bg-color);
+    background-color: var(--global-code-bg-color);
     
     .list-group-item {
       background-color: inherit;
-      border-color: var(--global-divider-color);
 
       .badge {
-        color: var(--global-card-bg-color) !important;
         background-color: var(--global-theme-color) !important;
       }
     }
-  }
-}
-
-.table-cv-map {
-  background-color: transparent;
-  border: none;
-  color: var(--global-text-color);
-}
-
-.date-column {
-  width: 75px;
-  transform: translateX(-15px) translateY(-5px);
-}
-
-// Repositories
-
-@media (min-width: 768px) {
-  .repo {
-    max-width: 50%;
   }
 }
 
