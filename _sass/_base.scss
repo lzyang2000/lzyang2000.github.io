@@ -507,6 +507,7 @@ footer.sticky-bottom {
 // CV
 
 .cv {
+<<<<<<< HEAD
   margin-bottom: 40px;
 
   .card {
@@ -518,7 +519,10 @@ footer.sticky-bottom {
       border-color: var(--global-divider-color);
 
       .badge {
+<<<<<<< HEAD
         color: var(--global-card-bg-color) !important;
+=======
+>>>>>>> 46d306f (Update `_base.scss` for cv)
         background-color: var(--global-theme-color) !important;
       }
     }
@@ -543,6 +547,8 @@ footer.sticky-bottom {
     max-width: 50%;
   }
 }
+=======
+>>>>>>> 46d306f (Update `_base.scss` for cv)
 
 // Blog
 
