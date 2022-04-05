@@ -5,6 +5,7 @@ title: cv
 nav: true
 cv_pdf: /assets/pdf/Yang_Lizhi_CV.pdf
 ---
+
 <div class="cv">
 	{% for entry in site.data.cv %}
 		<div class="card mt-3 p-3">
