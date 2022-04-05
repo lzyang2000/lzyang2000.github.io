@@ -295,30 +295,21 @@ footer.sticky-bottom {
 // CV
 
 .cv {
-<<<<<<< HEAD
   margin-bottom: 40px;
   
   .card {
     background-color: var(--global-card-bg-color);
-=======
-  .card {
-    background-color: var(--global-code-bg-color);
->>>>>>> 46d306f (Update `_base.scss` for cv)
     
     .list-group-item {
       background-color: inherit;
 
       .badge {
-<<<<<<< HEAD
         color: var(--global-card-bg-color) !important;
-=======
->>>>>>> 46d306f (Update `_base.scss` for cv)
         background-color: var(--global-theme-color) !important;
       }
     }
   }
 }
-<<<<<<< HEAD
 
 // Repositories
 
@@ -327,8 +318,6 @@ footer.sticky-bottom {
     max-width: 50%;
   }
 }
-=======
->>>>>>> 46d306f (Update `_base.scss` for cv)
 
 // Blog
 
