@@ -85,11 +85,7 @@ stackoverflow_id: #your stackoverflow id
 contact_note: >
   I check my email daily (I promise).
 google_analytics: G-KZH7TBDT4M # your google-analytics ID (format: UA-XXXXXXXXX)
-<<<<<<< HEAD
 google_site_verification: TAAflQRckL_Zo0wwDnbOPjlfofaCLr_wtl7x0WO96ok # your google-site-verification ID (Google Search Console)
-=======
-google_site_verification: TAAflQRckL_Zo0wwDnbO # your google-site-verification ID (Google Search Console)
->>>>>>> 3c421e1 (update SEO)
 bing_site_verification: C3FA72908713DA3402058462279133A4 # out your bing-site-verification ID (Bing Webmaster)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 # -----------------------------------------------------------------------------
