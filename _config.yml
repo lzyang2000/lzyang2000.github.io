@@ -7,25 +7,15 @@ first_name: Lizhi
 middle_name: 
 last_name: Yang
 email: lzyang@caltech.edu
-first_name: Lizhi
-middle_name: 
-last_name: Yang
-email: lzyang@caltech.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   All about Lizhi Yang
-  All about Lizhi Yang
 footer_text: >
-  
-keywords: lizhi, yang, robotics, control, research, machine learning, tech  # add your own keywords or leave empty
   
 keywords: lizhi, yang, robotics, control, research, machine learning, tech  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🤖  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
-icon: 🤖  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://lzyang2000.github.io # the base hostname & protocol for your site
-baseurl: # the subpath of your site, e.g. /blog/
 url: https://lzyang2000.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
@@ -50,7 +40,6 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: false
 rss_icon: false
 
 # -----------------------------------------------------------------------------
@@ -83,11 +72,8 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # -----------------------------------------------------------------------------
 
 github_username: lzyang2000 # your GitHub user name
-github_username: lzyang2000 # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
-linkedin_username: lzyang # your LinkedIn user name
-scholar_userid: jEf5Q-4AAAAJ # your Google Scholar ID
 linkedin_username: lzyang # your LinkedIn user name
 scholar_userid: jEf5Q-4AAAAJ # your Google Scholar ID
 orcid_id: # your ORCID ID
@@ -112,8 +98,6 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Thinker Space  # your blog must have a name for it to show up in the nav bar
-blog_description: Articles about robotics, control, machine learning, tech and more
 blog_name: Thinker Space  # your blog must have a name for it to show up in the nav bar
 blog_description: Articles about robotics, control, machine learning, tech and more
 permalink: /blog/:year/:title/
@@ -391,9 +375,7 @@ lazy_loading_images: true # enables lazy loading of images (recommended)
 # -----------------------------------------------------------------------------
 
 enable_google_analytics:    true  # enables google analytics
-enable_google_analytics:    true  # enables google analytics
 enable_panelbear_analytics: false  # enables panelbear analytics
-enable_google_verification: true  # enables google site verification
 enable_google_verification: true  # enables google site verification
 enable_bing_verification:   false  # enables bing site verification
 enable_masonry:             true   # enables automatic project cards arangement

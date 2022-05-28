@@ -1,8 +1,8 @@
-"Yang":
+"*Yang":
   - firstname: ["Lizhi", "L."]
     url:  https://lzyang2000.github.io
 
-"Xiao":
+"*Xiao":
   - firstname: ["Anxing", "A."]
     url: https://anxingxiao.com/
 
@@ -14,16 +14,8 @@
   - firstname: ["Koushil", "K."]
     url: https://me.berkeley.edu/people/koushil-sreenath/
 
-"Zakhor":
-  - firstname: ["Avideh", "A."]
-    url: https://www2.eecs.berkeley.edu/Faculty/Homepages/zakhor.html
 
-"Sreenath":
-  - firstname: ["Koushil", "K."]
-    url: https://me.berkeley.edu/people/koushil-sreenath/
-
-
-"Tong":
+"*Tong":
   - firstname: ["Wenzhe", "W."]
     url: https://jonathan-twz.github.io/
 
