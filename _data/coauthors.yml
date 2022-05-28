@@ -1,18 +1,44 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"*Yang":
+  - firstname: ["Lizhi", "L."]
+    url:  https://lzyang2000.github.io
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"*Xiao":
+  - firstname: ["Anxing", "A."]
+    url: https://anxingxiao.com/
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Zakhor":
+  - firstname: ["Avideh", "A."]
+    url: https://www2.eecs.berkeley.edu/Faculty/Homepages/zakhor.html
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Sreenath":
+  - firstname: ["Koushil", "K."]
+    url: https://me.berkeley.edu/people/koushil-sreenath/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+
+"*Tong":
+  - firstname: ["Wenzhe", "W."]
+    url: https://jonathan-twz.github.io/
+
+"Zeng":
+  - firstname: ["Jun", "J."]
+    url: https://jonathan-twz.github.io/
+
+"Sun":
+  - firstname: ["Mengti", "M."]
+    url: https://chrissun99.github.io/
+
+"Xu":
+  - firstname: ["Huijuan", "H."]
+    url: https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=hkx5063
+
+"Sclaroff":
+  - firstname: ["Stan", "S."]
+    url: https://www.cs.bu.edu/fac/sclaroff/
+
+"Saenko":
+  - firstname: ["Kate", "K."]
+    url: http://ai.bu.edu/ksaenko.html
+
+"Darrell":
+  - firstname: ["Trevor", "T."]
+    url: https://www2.eecs.berkeley.edu/Faculty/Homepages/darrell.html
