@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hello there! My name is Lizhi Yang. I graduated from the EECS department of UC Berkeley in spring 2022 and am currently transitioning towards my graduate studies as a Mechanical Engineering PhD student at Caltech. My research interests are in **legged robotics**, **control** and **machine learning**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
+Hello there! My name is Lizhi Yang. I graduated from the EECS department of UC Berkeley in spring 2022 and am currently transitioning towards my graduate studies as a **Mechanical Engineering PhD student at Caltech**. My research interests are in **legged robotics**, **control** and **machine learning**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). In life I am a tech enthusiast and sci-fi lover. My CV is linked [here](/assets/pdf/Yang_Lizhi_CV.pdf). If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
