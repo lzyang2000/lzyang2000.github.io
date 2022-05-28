@@ -7,4 +7,4 @@ importance: 1
 category: course
 ---
 
-Checkout the work in [this repo](https://github.com/Bennyoooo/MultiTaskDeepRL)!
+Check out the work in [this repo](https://github.com/Bennyoooo/MultiTaskDeepRL)!
