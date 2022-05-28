@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: Collection of my research and personal projects.
 nav: true
-display_categories: [work, fun, course, hackathon]
+display_categories: [course project, hackathon project]
 horizontal: false
 ---
 
