@@ -265,7 +265,7 @@ scholar:
   last_name: Yang
   first_name: [Lizhi, L.]
 
-  style: ieee
+  style: https://github.com/citation-style-language/styles/blob/master/ieee.csl
   locale: en
 
   source: /_bibliography/
