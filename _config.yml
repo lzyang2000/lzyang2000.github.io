@@ -96,8 +96,8 @@ disqus_shortname: lzyang2000 # put your disqus shortname
 # If you have blog posts published on medium.com or other exteranl sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+  - name:
+    rss_url:
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -198,10 +198,10 @@ jekyll-archives:
 
 scholar:
 
-  last_name: Einstein
-  first_name: [Albert, A.]
+  last_name: Yang
+  first_name: [Lizhi, L.]
 
-  style: apa
+  style: ieee
   locale: en
 
   source: /_bibliography/
