@@ -3,23 +3,21 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+first_name: Lizhi
+middle_name: 
+last_name: Yang
+email: lzyang@caltech.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  All about Lizhi Yang
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+  
+keywords: lizhi, yang, robotics, control, research, machine learning, tech  # add your own keywords or leave empty
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
+lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+icon: 🤖  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+
+url: https://lzyang2000.github.io # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -41,6 +39,8 @@ repo_trophies:
 # -----------------------------------------------------------------------------
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
+
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -68,26 +68,39 @@ serve_schema_org: false # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
-# Analytics and search engine verification
+# Social integration
 # -----------------------------------------------------------------------------
 
-# For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
-# and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
-google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
-cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
-pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
-openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
+github_username: lzyang2000 # your GitHub user name
+gitlab_username: # your GitLab user name
+twitter_username: # your Twitter handle
+linkedin_username: lzyang # your LinkedIn user name
+scholar_userid: jEf5Q-4AAAAJ # your Google Scholar ID
+orcid_id: # your ORCID ID
+medium_username: # your Medium username
+quora_username: # your Quora username
+publons_id: # your ID on Publons
+research_gate_profile: # your profile on ResearchGate
+blogger_url: # your blogger URL
+work_url: # work page URL
+keybase_username: # your keybase user name
+wikidata_id: # your wikidata id
+dblp_url: # your DBLP profile url
+stackoverflow_id: #your stackoverflow id
 
-# For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: # your google-site-verification ID (Google Search Console)
-bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
+contact_note: >
+  I check my email daily (I promise).
+
+google_analytics: G-KZH7TBDT4M # your google-analytics ID (format: UA-XXXXXXXXX)
+google_site_verification: jg8TYDZm986gZm9b3Z6rV9I1so3ZKuwfc57ogWX1EqY # your google-site-verification ID (Google Search Console)
+bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Thinker Space  # your blog must have a name for it to show up in the nav bar
+blog_description: Articles about robotics, control, machine learning, tech and more
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -375,21 +388,21 @@ lazy_loading_images: true # enables lazy loading of images (recommended)
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics: false # enables google analytics
-enable_cronitor_analytics: false # enables cronitor RUM analytics
-enable_pirsch_analytics: false # enables Pirsch analytics (https://pirsch.io/)
-enable_openpanel_analytics: false # enables Openpanel analytics (https://openpanel.dev/)
-enable_google_verification: false # enables google site verification
-enable_bing_verification: false # enables bing site verification
-enable_masonry: true # enables automatic project cards arrangement
-enable_math: true # enables math typesetting (uses MathJax)
-enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
-enable_darkmode: true # enables switching between light/dark modes
-enable_navbar_social: false # enables displaying social links in the navbar on the about page
-enable_project_categories: true # enables categorization of projects into multiple categories
-enable_medium_zoom: true # enables image zoom feature (as on medium.com)
-enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
-enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
+enable_google_analytics:    true  # enables google analytics
+enable_panelbear_analytics: false  # enables panelbear analytics
+enable_google_verification: true  # enables google site verification
+enable_bing_verification:   false  # enables bing site verification
+enable_masonry:             true   # enables automatic project cards arangement
+enable_math:                true   # enables math typesetting (uses MathJax)
+enable_tooltips:            false  # enables automatic tooltip links generated
+                                   # for each section titles on pages and posts
+enable_darkmode:            true   # enables switching between light/dark modes
+enable_navbar_social:       false  # enables displaying social links in the
+                                   # navbar on the about page
+enable_project_categories:  true   # enables categorization of projects into
+                                   # multiple categories
+enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
+
 
 # -----------------------------------------------------------------------------
 # Library versions
