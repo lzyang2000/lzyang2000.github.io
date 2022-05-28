@@ -74,10 +74,9 @@ contact_note: >
   I check my email daily (I promise).
 
 google_analytics: G-KZH7TBDT4M # your google-analytics ID (format: UA-XXXXXXXXX)
-google_site_verification: jg8TYDZm986gZm9b3Z6rV9I1so3ZKuwfc57ogWX1EqY # your google-site-verification ID (Google Search Console)
-bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
+google_site_verification: TAAflQRckL_Zo0wwDnbO # your google-site-verification ID (Google Search Console)
+bing_site_verification: C3FA72908713DA3402058462279133A4 # out your bing-site-verification ID (Bing Webmaster)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
-
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
