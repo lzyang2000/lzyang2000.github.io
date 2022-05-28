@@ -7,4 +7,4 @@ importance: 3
 category: course
 ---
 
-Checkout the work in [this repo](https://github.com/lzyang2000/BobaBot)!
+Check out the work in [this repo](https://github.com/lzyang2000/BobaBot)!

@@ -8,4 +8,4 @@ category: hackathon
 
 ---
 
-Checkout the work in [this repo](https://github.com/lzyang2000/Avia-X)!
+Check out the work in [this repo](https://github.com/lzyang2000/Avia-X)!
