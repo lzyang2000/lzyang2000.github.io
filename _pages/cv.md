@@ -1,13 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-<<<<<<< HEAD
 title: CV
-nav: true
-cv_pdf: Yang_Lizhi_CV.pdf
----
-=======
-title: cv
 nav: true
 cv_pdf: Yang_Lizhi_CV.pdf
 ---
@@ -109,4 +103,4 @@ cv_pdf: Yang_Lizhi_CV.pdf
 		</div>
 	{% endfor %}
 </div>
->>>>>>> 9f7a53b (Add `cv.md`)
+
