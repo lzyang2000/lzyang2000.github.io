@@ -1,7 +1,8 @@
 ---
-layout: cv
-permalink: /cv/
+layout: post
 title: CV
+date: 2021-07-04 17:39:00
+description: My CV
 nav: true
-cv_pdf: Yang_Lizhi_CV.pdf
+redirect: /assets/pdf/Yang_Lizhi_CV.pdf
 ---
