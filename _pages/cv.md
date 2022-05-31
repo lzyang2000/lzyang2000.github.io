@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: CV
+title: cv
 nav: true
 cv_pdf: Yang_Lizhi_CV.pdf
 ---
