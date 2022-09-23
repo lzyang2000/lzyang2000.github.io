@@ -1,12 +1,9 @@
 github_users:
-  - torvalds
+  - lzyang2000
   - alshedivat
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - lzyang2000/Avia-X
+  - lzyang2000/herox
+
+
