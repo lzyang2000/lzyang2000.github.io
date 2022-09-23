@@ -9,10 +9,10 @@ profile:
   image: prof_pic.jpg
   image_cicular: false # crops the image to make it circular
   address: >
-    <!-- <p>321 Cory Hall</p>
-    <p>Hearst Ave.</p>
-    <p>Berkeley, CA 94720</p>-->
-
+    <p>1200 E California Blvd</p>
+    <p>MC 104-44</p>
+    <p>Pasadena, CA 91125</p>
+news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 
@@ -25,9 +25,10 @@ latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
+nav_order: 1
 ---
 
-Hello there! My name is Lizhi Yang. I graduated from the EECS department of UC Berkeley in spring 2022 and am currently transitioning towards my graduate studies as a **Mechanical Engineering PhD student at Caltech**. My research interests are in **legged robotics**, **control** and **machine learning**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
+Hello there! My name is Lizhi Yang. I am currently a **Mechanical Engineering PhD student at Caltech**. My research interests are in **legged robotics**, **control** and **machine learning**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

@@ -6,6 +6,7 @@ description: Collection of my research and personal projects.
 nav: true
 display_categories: [course, hackathon]
 horizontal: false
+nav_order: 5
 ---
 
 <!-- pages/projects.md -->
