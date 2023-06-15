@@ -119,7 +119,7 @@ bing_site_verification: C3FA72908713DA3402058462279133A4  # out your bing-site-v
 # -----------------------------------------------------------------------------
 
 blog_name: Thinker Space  # your blog must have a name for it to show up in the nav bar
-blog_nav_title: # your blog must have a title for it to be displayed in the nav bar
+blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
 blog_description: Articles about robotics, control, machine learning, tech and more
 permalink: /blog/:year/:title/
 
