@@ -1,6 +1,16 @@
 "ICRA":
   url: https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra
   # color: "#00369f"
+"Elec. Img.":
+  url: https://www.imaging.org/
+  # color: "#00369f"
+
+"CASE":
+  url: https://www.ieee-ras.org/conferences-workshops/fully-sponsored/case
+  # color: "#00369f"
+"ICCHP":
+  url: https://develop.icchp.org/
+  # color: "#00369f"
 
 # "PhysRev":
 #   url: https://journals.aps.org/

@@ -9,7 +9,7 @@
       value: English, Chinese
 
 - title: Education
-  type: table
+  type: time_table
   contents:
     - title: PhD student, Mechanical Engineering, <a href="https://www.caltech.edu/">California Institute of Technology</a>
       year: Expected 2027
@@ -19,24 +19,24 @@
         - 'GPA: 3.874'
 
 - title: Summary of Research Skills
-  type: table
+  type: time_table
   contents:
     - title: ROS , python , C++ , PyTorch , Tensorflow , Docker , optimization (Casadi) , project management , data collection , data management
 
 - title: Research Interests
-  type: table
+  type: time_table
   contents:
     - title: Legged robotics , robot learning , robotic sensing & locomotion , multi‐robot cooperation , computer vision , sensor fusion
 
 - title: Awards and Honors
-  type: table
+  type: time_table
   contents:
     - title: <a href="https://www2.eecs.berkeley.edu/Students/Awards/9/">Arthur M. Hopkin Award</a>
       year: 2022
       description: Selected based on seriousness of purpose and high academic achievement.
 
 - title: Experience
-  type: table
+  type: time_table
   contents:
     - title: Undergraduate Researcher, <a href="https://www.universityofcalifornia.edu/">University of California, Berkeley</a>
       year: 05/2019–08/2022
@@ -61,7 +61,7 @@
         - 'Planned and hosted professional and educational outreach events.'
 
 - title: Memberships
-  type: table
+  type: time_table
   contents:
     - title: Institute of Electrical and Electronics Engineers
       year: 2022–present
