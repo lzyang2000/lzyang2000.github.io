@@ -30,14 +30,7 @@ nav_order: 1
 
 Hello there! My name is Lizhi Yang. I am currently a Mechanical Engineering PhD candidate at Caltech. My research interests are in **legged robotics**, **control** and **machine learning**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). I have also worked at Samsara Inc. In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
 <!-- ![caltech](/assets/img/caltech.png)![samsara](/assets/img/samsara.png) -->
-<div class="row justify-content-sm-center">
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid path="/assets/img/caltech.png" title="Caltech" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid path="/assets/img/samsara.png" title="Samsara" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+![first image](/assets/img/caltech.png){:class="img-fluid rounded z-depth-1"} ![second image](/assets/img/samsara.png){:class="img-fluid rounded z-depth-1"}
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
