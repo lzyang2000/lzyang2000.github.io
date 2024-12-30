@@ -28,7 +28,7 @@ latest_posts:
 nav_order: 1
 ---
 
-Hello there! My name is Lizhi Yang. I am currently a **Mechanical Engineering PhD student at Caltech**. My research interests are in **legged robotics**, **control** and **machine learning**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
+Hello there! My name is Lizhi Yang. I am currently a Mechanical Engineering PhD candidate at Caltech. My research interests are in **legged robotics**, **control** and **machine learning**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
