@@ -48,10 +48,10 @@ rss_icon: false
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
-socials_in_search: true
-posts_in_search: true
-bib_search: true
+search_enabled: false
+socials_in_search: false
+posts_in_search: false
+bib_search: false
 
 # Dimensions
 max_width: 930px
@@ -120,19 +120,19 @@ bing_site_verification: C3FA72908713DA3402058462279133A4  # out your bing-site-v
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Thinker Space  # your blog must have a name for it to show up in the nav bar
-blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-blog_description: Articles about robotics, control, machine learning, tech and more
-permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
+# blog_name: Thinker Space  # your blog must have a name for it to show up in the nav bar
+# blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
+# blog_description: Articles about robotics, control, machine learning, tech and more
+# permalink: /blog/:year/:title/
+# lsi: false # produce an index for related posts
 
 # Pagination
-pagination:
-  enabled: true
+# pagination:
+#   enabled: true
 
-related_blog_posts:
-  enabled: true
-  max_related: 5
+# related_blog_posts:
+#   enabled: true
+#   max_related: 5
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out
@@ -151,9 +151,6 @@ related_blog_posts:
 #   lang: en
 
 # Disqus comments (DEPRECATED)
-related_blog_posts:
-  enabled: true
-  max_related: 5
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
@@ -192,8 +189,8 @@ collections:
     defaults:
       layout: post
     output: true
-  projects:
-    output: true
+  # projects:
+  #   output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -234,13 +231,16 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - _pages/blog.md
+  - _posts/
+  - _projects/?_project.md
 keep_files:
   - CNAME
   - .nojekyll
 
 # Plug-ins
 plugins:
-  - jekyll-archives-v2
+  # - jekyll-archives-v2
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
@@ -291,18 +291,18 @@ terser:
 # Jekyll Archives
 # -----------------------------------------------------------------------------
 
-jekyll-archives:
-  posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-    permalinks:
-      year: "/blog/:year/"
-      tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+# jekyll-archives:
+#   posts:
+#     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+#     permalinks:
+#       year: "/blog/:year/"
+#       tags: "/blog/:type/:name/"
+#       categories: "/blog/:type/:name/"
+#   books:
+#     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: [] #['formatting', 'images', 'links', 'math', 'code'] # this tags will be dispalyed on the front page of your blog
-display_categories: [] #["external-services"] # these categories will be displayed on the front page of your blog
+# display_tags: [] #['formatting', 'images', 'links', 'math', 'code'] # this tags will be dispalyed on the front page of your blog
+# display_categories: [] #["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -424,7 +424,7 @@ enable_masonry:             true   # enables automatic project cards arangement
 enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            false  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
-enable_darkmode:            true   # enables switching between light/dark modes
+enable_darkmode:            false   # enables switching between light/dark modes
 enable_navbar_social:       false  # enables displaying social links in the
                                    # navbar on the about page
 enable_project_categories:  true   # enables categorization of projects into
@@ -665,9 +665,9 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
+# jekyll_get_json:
+#   - data: resume
+#     json: assets/json/resume.json # it can also be an url
 
 jsonresume:
   - basics

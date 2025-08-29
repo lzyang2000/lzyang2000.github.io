@@ -1,8 +1,8 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: CV
 nav: true
-cv_pdf: Yang_Lizhi_CV.pdf
+cv_pdf: CV.pdf
 nav_order: 3
 ---

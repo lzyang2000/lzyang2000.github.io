@@ -1,5 +1,154 @@
 ---
 ---
+@article{yang2025shield,
+  abbr={IROS},
+  title={SHIELD: Safety on Humanoids via CBFs In Expectation on Learned Dynamics},
+  author={Yang, Lizhi and Werner, Blake and Cosner, Ryan K and Fridovich-Keil, David and Culbertson, Preston and Ames, Aaron D},
+  journal={arXiv preprint arXiv:2505.11494},
+  year={2025},
+  abstract={Robot learning has produced remarkably effective ``black-box'' controllers for complex tasks such as dynamic locomotion on humanoids. Yet ensuring dynamic safety, i.e., constraint satisfaction, remains challenging for such policies. Reinforcement learning (RL) embeds constraints heuristically through reward engineering, and adding or modifying constraints requires retraining. Model-based approaches, like control barrier functions (CBFs), enable runtime constraint specification with formal guarantees but require accurate dynamics models. This paper presents SHIELD, a layered safety framework that bridges this gap by: (1) training a generative, stochastic dynamics residual model using real-world data from hardware rollouts of the nominal controller, capturing system behavior and uncertainties; and (2) adding a safety layer on top of the nominal (learned locomotion) controller that leverages this model via a stochastic discrete-time CBF formulation enforcing safety constraints in probability. The result is a minimally-invasive safety layer that can be added to the existing autonomy stack to give probabilistic guarantees of safety that balance risk and performance. In hardware experiments on an Unitree G1 humanoid, SHIELD enables safe navigation (obstacle avoidance) through varied indoor and outdoor environments using a nominal (unknown) RL controller and onboard perception.},
+  html={https://arxiv.org/abs/2505.11494},
+  doi={10.48550/arXiv.2505.11494},
+  pdf={https://arxiv.org/pdf/2505.11494.pdf},
+  selected={true}
+}
+
+@article{yang2025bracing,
+  title={Bracing for Impact: Robust Humanoid Push Recovery and Locomotion with Reduced Order Models},
+  author={Yang, Lizhi and Werner, Blake and Ghansah, Adrian B and Ames, Aaron D},
+  journal={arXiv preprint arXiv:2505.11495},
+  year={2025},
+  abstract={Push recovery during locomotion will facilitate the deployment of humanoid robots in human-centered environments. In this paper, we present a unified framework for walking control and push recovery for humanoid robots, leveraging the arms for push recovery while dynamically walking. The key innovation is to use the environment, such as walls, to facilitate push recovery by combining Single Rigid Body model predictive control (SRB-MPC) with Hybrid Linear Inverted Pendulum (HLIP) dynamics to enable robust locomotion, push detection, and recovery by utilizing the robot's arms to brace against such walls and dynamically adjusting the desired contact forces and stepping patterns. Extensive simulation results on a humanoid robot demonstrate improved perturbation rejection and tracking performance compared to HLIP alone, with the robot able to recover from pushes up to 100N for 0.2s while walking at commanded speeds up to 0.5m/s. Robustness is further validated in scenarios with angled walls and multi-directional pushes.},
+  abbr={Humanoids},
+  html={https://arxiv.org/abs/2505.11495},
+  doi={10.48550/arXiv.2505.11495},
+  pdf={https://arxiv.org/pdf/2505.11495.pdf},
+  selected={true}
+}
+
+@inproceedings{huang2023creating,
+  title={Creating a dynamic quadrupedal robotic goalkeeper with reinforcement learning},
+  author={Huang, Xiaoyu and Li, Zhongyu and Xiang, Yanzhen and Ni, Yiming and Chi, Yufeng and Li, Yunhao and Yang, Lizhi and Peng, Xue Bin and Sreenath, Koushil},
+  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={2715--2722},
+  year={2023},
+  organization={IEEE},
+  abbr={IROS},
+  selected={false},
+  html={https://ieeexplore.ieee.org/document/10341936},
+  doi={10.1109/IROS55887.2023.10341936},
+  pdf={https://arxiv.org/pdf/2309.06149.pdf},
+  abstract={We present a reinforcement learning (RL) frame-
+work that enables quadrupedal robots to perform soccer
+goalkeeping tasks in the real world. Soccer goalkeeping with
+quadrupeds is a challenging problem, that combines highly
+dynamic locomotion with precise and fast non-prehensile object
+(ball) manipulation. The robot needs to react to and intercept a
+potentially flying ball using dynamic locomotion maneuvers in
+a very short amount of time, usually less than one second.
+In this paper, we propose to address this problem using a
+hierarchical model-free RL framework. The first component
+of the framework contains multiple control policies for distinct
+locomotion skills, which can be used to cover different regions
+of the goal. Each control policy enables the robot to track
+random parametric end-effector trajectories while performing
+one specific locomotion skill, such as jump, dive, and sidestep.
+These skills are then utilized by the second part of the frame-
+work which is a high-level planner to determine a desired skill
+and end-effector trajectory in order to intercept a ball flying to
+different regions of the goal. We deploy the proposed framework
+on a Mini Cheetah quadrupedal robot and demonstrate the
+effectiveness of our framework for various agile interceptions
+of a fast-moving ball in the real world.}
+
+}
+
+@inproceedings{feng2023genloco,
+  title={Genloco: Generalized locomotion controllers for quadrupedal robots},
+  author={Feng, Gilbert and Zhang, Hongbo and Li, Zhongyu and Peng, Xue Bin and Basireddy, Bhuvan and Yue, Linzhu and Song, Zhitao and Yang, Lizhi and Liu, Yunhui and Sreenath, Koushil and others},
+  booktitle={Conference on Robot Learning},
+  pages={1893--1903},
+  year={2023},
+  organization={PMLR},
+  doi={10.48550/arXiv.2309.06149},
+  pdf={https://arxiv.org/pdf/2309.06149.pdf},
+  html={https://arxiv.org/abs/2309.06149},
+  abbr={CoRL},
+  abstract={Recent years have seen a surge in commercially-available and affordable quadrupedal robots, with many of these platforms being actively used in research and industry. As the availability of legged robots grows, so does the need for controllers that enable these robots to perform useful skills. However, most learning-based frameworks for controller development focus on training robot-specific controllers, a process that needs to be repeated for every new robot. In this work, we introduce a framework for training generalized locomotion (GenLoco) controllers for quadrupedal robots. Our framework synthesizes general-purpose locomotion controllers that can be deployed on a large variety of quadrupedal robots with similar morphologies. We present a simple but effective morphology randomization method that procedurally generates a diverse set of simulated robots for training. We show that by training a controller on this large set of simulated robots, our models acquire more general control strategies that can be directly transferred to novel simulated and real-world robots with diverse morphologies, which were not observed during training.}
+}
+
+@article{zhang2022generating,
+  title={Generating a terrain-robustness benchmark for legged locomotion: A prototype via terrain authoring and active learning},
+  author={Zhang, Chong and Yang, Lizhi},
+  journal={arXiv preprint arXiv:2208.07681},
+  year={2022},
+  abstract={Terrain-aware locomotion has become an emerging topic in legged robotics. However, it is hard to generate diverse, challenging, and realistic unstructured terrains in simulation, which limits the way researchers evaluate their locomotion policies. In this paper, we prototype the generation of a terrain dataset via terrain authoring and active learning, and the learned samplers can stably generate diverse high-quality terrains. We expect the generated dataset to make a terrain-robustness benchmark for legged locomotion. The dataset, the code implementation, and some policy evaluations are released at https://bit.ly/3bn4j7f.},
+  abbr={ICRA},
+  html={https://arxiv.org/abs/2208.07681},
+  pdf={https://arxiv.org/pdf/2208.07681.pdf},
+  doi={10.48550/arXiv.2208.07681},
+
+}
+
+@article{yang2022collaborative,
+  title={Collaborative navigation and manipulation of a cable-towed load by multiple quadrupedal robots},
+  author={Yang, Chenyu and Sue, Guo Ning and Li, Zhongyu and Yang, Lizhi and Shen, Haotian and Chi, Yufeng and Rai, Akshara and Zeng, Jun and Sreenath, Koushil},
+  journal={IEEE Robotics and Automation Letters},
+  volume={7},
+  number={4},
+  pages={10041--10048},
+  year={2022},
+  publisher={IEEE},
+  abstract={This paper tackles the problem of robots collaboratively towing a load with cables to a specified goal location while avoiding collisions in real time. The introduction of cables (as opposed to rigid links) enables the robotic team to travel through narrow spaces by changing its intrinsic dimensions through slack/taut switches of the cable. However, this is a challenging problem because of the hybrid mode switches and the dynamical coupling among multiple robots and the load. Previous attempts at addressing such a problem were performed offline and do not consider avoiding obstacles online. In this paper, we introduce a cascaded planning scheme with a parallelized centralized trajectory optimization that deals with hybrid mode switches. We additionally develop a set of decentralized planners per robot, which enables our approach to solve the problem of collaborative load manipulation online. We develop and demonstrate one of the first collaborative autonomy framework that is able to move a cable-towed load, which is too heavy to move by a single robot, through narrow spaces with real-time feedback and reactive planning in experiments.},
+  abbr={RA-L},
+  html={https://ieeexplore.ieee.org/document/9830869},
+  pdf={https://arxiv.org/pdf/2206.14424}
+
+}
+
+@INPROCEEDINGS{yang2022bayesian,
+  abbr={ICRA},
+  title={Bayesian Optimization Meets Hybrid Zero Dynamics: Safe Parameter Learning for Bipedal Locomotion Control},
+  author={Yang, Lizhi and Li, Zhongyu and Zeng, Jun and Sreenath, Koushil},
+  booktitle={2022 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  year={2022},
+  abstract={In this paper, we propose a multi-domain control parameter learning framework that combines Bayesian Optimization (BO) and Hybrid Zero Dynamics (HZD) for locomotion control of bipedal robots. We leverage BO to learn the control parameters used in the HZD-based controller. The learning process is firstly deployed in simulation to optimize different control parameters for a large repertoire of gaits. Next, to tackle the discrepancy between the simulation and the real world, the learning process is applied on the physical robot to learn for corrections to the control parameters learned in simulation while also respecting a safety constraint for gait stability. This method empowers an efficient sim-to-real transition with a small number of samples in the real world, and does not require a valid controller to initialize the training in simulation. Our proposed learning framework is experimentally deployed and validated on a bipedal robot Cassie to perform versatile locomotion skills with improved performance on smoothness of walking gaits and reduction of steady-state tracking errors.},
+  selected={true},
+  html={https://arxiv.org/abs/2203.02570},
+  pdf={https://arxiv.org/pdf/2203.02570.pdf},
+  doi={10.48550/arXiv.2203.02570}
+}
+
+@article{lizhi2022drone,
+abbr={Elec. Img.},
+  title={Drone object detection using RGB/IR fusion},
+  author={Yang, Lizhi and Ma, Ruhang and Zakhor, Avideh},
+  journal={Electronic Imaging},
+  volume={34},
+  pages={1--6},
+  year={2022},
+  publisher={Society for Imaging Science and Technology},
+  abstract={Object detection using aerial drone imagery has received a great deal of attention in recent years. While visible light images are adequate for detecting objects in most scenarios, thermal cameras can extend the capabilities of object detection to night-time or occluded objects. As such, RGB and Infrared (IR) fusion methods for object detection are useful and important. One of the biggest challenges in applying deep learning methods to RGB/IR object detection is the lack of available training data for drone IR imagery, especially at night. In this paper, we develop several strategies for creating synthetic IR images using the AIRSim simulation engine and CycleGAN. Furthermore, we utilize an illumination-aware fusion framework to fuse RGB and IR images for object detection on the ground. We characterize and test our methods for both simulated and actual data. Our solution is implemented on an NVIDIA Jetson Xavier running on an actual drone, requiring about 28 milliseconds of processing per RGB/IR image pair.},
+  html={https://doi.org/10.2352/EI.2022.34.14.COIMG-179},
+  pdf={https://arxiv.org/pdf/2201.03786.pdf}
+}
+
+@article{zixian2022sensor,
+abbr={Elec. Img.},
+  title={Sensor-aware frontier exploration and mapping with application to thermal mapping of building interiors},
+  author={Zang, Zixian and Shen, Haotian and Yang, Lizhi and  Zakhor, Avideh},
+  journal={Electronic Imaging},
+  volume={34},
+  pages={1--5},
+  year={2022},
+  publisher={Society for Imaging Science and Technology},
+  abstract={The combination of simultaneous localization and mapping(SLAM) and frontier exploration enables a robot to traverse and map an unknown area autonomously. Most prior autonomous SLAM solutions utilize information only from depth sensing devices. However, in situations where the main goal is to collect data from auxiliary sensors such as thermal camera, existing approaches require two passes: one pass to create a map of the environment and another to collect the auxiliary data, which is both time consuming and energy inefficient. We propose a sensor-aware frontier exploration algorithm that enables the robot to perform map construction and auxiliary data collection in one pass. Specifically, our method uses a realtime ray tracing technique to construct a map that encodes unvisited locations from the perspective of auxiliary sensors rather than depth sensors; this encourages the robot to fully explore those areas to complete the data collection task and map making in one pass. Our proposed exploration framework is deployed on a LoCoBot with the task to collect thermal images from building envelopes. We validate with experiments in a multi-room commercial building. Using a metric that evaluates the coverage of sensor data, our method significantly outperforms the baseline method with a naive SLAM algorithm. The code can be found at https://github.com/lzyang2000/herox},
+  html={https://library.imaging.org/ei/articles/34/16/AVM-117},
+  pdf={https://library.imaging.org/admin/apis/public/api/sandbox/website/downloadArticle/ei/34/16/AVM-117}
+}
+
+@INPROCEEDINGS{9551524,  abbr={CASE},author={Gilroy, Scott and Lau, Derek and Yang, Lizhi and Izaguirre, Ed and Biermayer, Kristen and Xiao, Anxing and Sun, Mengti and Agrawal, Ayush and Zeng, Jun and Li, Zhongyu and Sreenath, Koushil},  booktitle={2021 IEEE 17th International Conference on Automation Science and Engineering (CASE)},   title={Autonomous Navigation for Quadrupedal Robots with Optimized Jumping through Constrained Obstacles},   year={2021},  volume={},  number={},  pages={2132-2139},  abstract={Quadrupeds are strong candidates for navigating challenging environments because of their agile and dynamic designs. This paper presents a methodology that extends the range of exploration for quadrupedal robots by creating an end-to-end navigation framework that exploits walking and jumping modes. To obtain a dynamic jumping maneuver while avoiding obstacles, dynamically-feasible trajectories are optimized offline through collocation-based optimization where safety constraints are imposed. Such optimization schematic allows the robot to jump through window-shaped obstacles by considering both obstacles in the air and on the ground. The resulted jumping mode is utilized in an autonomous navigation pipeline that leverages a search-based global planner and a local planner to enable the robot to reach the goal location by walking. A state machine together with a decision making strategy allows the system to switch behaviors between walking around obstacles or jumping through them. The proposed framework is experimentally deployed and validated on a quadrupedal robot, a Mini Cheetah, to enable the robot to autonomously navigate through an environment while avoiding obstacles and jumping over a maximum height of 13 cm to pass through a window-shaped opening in order to reach its goal. (Video11Experimental videos can be found at https://youtu.be/5pzJ8U7YvGc.)},  keywords={},  doi={10.1109/CASE49439.2021.9551524},  ISSN={2161-8089},  month={Aug},
+  html={https://ieeexplore.ieee.org/abstract/document/9551524},pdf={https://arxiv.org/pdf/2107.00773.pdf}}
 
 @INPROCEEDINGS{9561786,
   abbr={ICRA},
@@ -17,10 +166,23 @@
   month={May},
   html={https://ieeexplore.ieee.org/abstract/document/9561786},
   pdf={https://arxiv.org/pdf/2103.14300.pdf},
-  selected={true}}
+  selected={false}
+  }
 
-  @INPROCEEDINGS{9551524,  abbr={CASE},author={Gilroy, Scott and Lau, Derek and Yang, Lizhi and Izaguirre, Ed and Biermayer, Kristen and Xiao, Anxing and Sun, Mengti and Agrawal, Ayush and Zeng, Jun and Li, Zhongyu and Sreenath, Koushil},  booktitle={2021 IEEE 17th International Conference on Automation Science and Engineering (CASE)},   title={Autonomous Navigation for Quadrupedal Robots with Optimized Jumping through Constrained Obstacles},   year={2021},  volume={},  number={},  pages={2132-2139},  abstract={Quadrupeds are strong candidates for navigating challenging environments because of their agile and dynamic designs. This paper presents a methodology that extends the range of exploration for quadrupedal robots by creating an end-to-end navigation framework that exploits walking and jumping modes. To obtain a dynamic jumping maneuver while avoiding obstacles, dynamically-feasible trajectories are optimized offline through collocation-based optimization where safety constraints are imposed. Such optimization schematic allows the robot to jump through window-shaped obstacles by considering both obstacles in the air and on the ground. The resulted jumping mode is utilized in an autonomous navigation pipeline that leverages a search-based global planner and a local planner to enable the robot to reach the goal location by walking. A state machine together with a decision making strategy allows the system to switch behaviors between walking around obstacles or jumping through them. The proposed framework is experimentally deployed and validated on a quadrupedal robot, a Mini Cheetah, to enable the robot to autonomously navigate through an environment while avoiding obstacles and jumping over a maximum height of 13 cm to pass through a window-shaped opening in order to reach its goal. (Video11Experimental videos can be found at https://youtu.be/5pzJ8U7YvGc.)},  keywords={},  doi={10.1109/CASE49439.2021.9551524},  ISSN={2161-8089},  month={Aug},
-  html={https://ieeexplore.ieee.org/abstract/document/9551524},pdf={https://arxiv.org/pdf/2107.00773.pdf}}
+@inproceedings{yang2020indoor,
+abbr={ICCHP},
+  title={Indoor query system for the visually impaired},
+  author={Yang, Lizhi and Herzi, Ilian and Zakhor, Avideh and Hiremath, Anup and Bazargan, Sahm and Tames-Gadam, Robert},
+  booktitle={International Conference on Computers Helping People with Special Needs},
+  pages={517--525},
+  year={2020},
+  organization={Springer},
+  abstract={Scene query is an important problem for the visually impaired population. While existing systems are able to recognize objects surrounding a person, one of their significant shortcomings is that they typically rely on the phone camera with a finite field of view. Therefore, if the object is situated behind the user, it will go undetected unless the user spins around and takes a series of pictures. The recent introduction of affordable, panoramic cameras solves this problem. In addition, most existing systems report all “significant” objects in a given scene to the user, rather than respond to a specific user-generated query as to where an object located. The recent introduction of text-to-speech and speech recognition capabilities on mobile phones paves the way for such user-generated queries, and for audio response generation to the user. In this paper, we exploit the above advancements to develop a query system for the visually impaired utilizing a panoramic camera and a smartphone. We propose three designs for such a system: the first is a handheld device, and the second and third are wearable backpack and ring. In all three cases, the user interacts with our systems verbally regarding whereabouts of objects of interest. We exploit deep learning methods to train our system to recognize objects of interest. Accuracy of our system for the disjoint test data from the same buildings in the training set is 99%, and for test data from new buildings not present in the training data set is 53%.},
+  html={https://link.springer.com/chapter/10.1007/978-3-030-58796-3_59},
+  pdf={http://www-video.eecs.berkeley.edu/papers/lyang/Indoor_Query_System_For_The_Visually_Impaired.pdf}
+}
+
+
 
 @misc{https://doi.org/10.48550/arxiv.2004.00180,
 abbr={EPIC@ECCV2020},
@@ -43,55 +205,7 @@ abbr={EPIC@ECCV2020},
   abstract={Spatio-temporal action detection in videos requires localizing the action both spatially and temporally in the form of an "action tube". Nowadays, most spatio-temporal action detection datasets (e.g. UCF101-24, AVA, DALY) are annotated with action tubes that contain a single person performing the action, thus the predominant action detection models simply employ a person detection and tracking pipeline for localization. However, when the action is defined as an interaction between multiple objects, such methods may fail since each bounding box in the action tube contains multiple objects instead of one person. In this paper, we study the spatio-temporal action detection problem with multi-object interaction. We introduce a new dataset that is annotated with action tubes containing multi-object interactions. Moreover, we propose an end-to-end spatio-temporal action detection model that performs both spatial and temporal regression simultaneously. Our spatial regression may enclose multiple objects participating in the action. During test time, we simply connect the regressed bounding boxes within the predicted temporal duration using a simple heuristic. We report the baseline results of our proposed model on this new dataset, and also show competitive results on the standard benchmark UCF101-24 using only RGB input.}
 }
 
-@inproceedings{yang2020indoor,
-abbr={ICCHP},
-  title={Indoor query system for the visually impaired},
-  author={Yang, Lizhi and Herzi, Ilian and Zakhor, Avideh and Hiremath, Anup and Bazargan, Sahm and Tames-Gadam, Robert},
-  booktitle={International Conference on Computers Helping People with Special Needs},
-  pages={517--525},
-  year={2020},
-  organization={Springer},
-  abstract={Scene query is an important problem for the visually impaired population. While existing systems are able to recognize objects surrounding a person, one of their significant shortcomings is that they typically rely on the phone camera with a finite field of view. Therefore, if the object is situated behind the user, it will go undetected unless the user spins around and takes a series of pictures. The recent introduction of affordable, panoramic cameras solves this problem. In addition, most existing systems report all “significant” objects in a given scene to the user, rather than respond to a specific user-generated query as to where an object located. The recent introduction of text-to-speech and speech recognition capabilities on mobile phones paves the way for such user-generated queries, and for audio response generation to the user. In this paper, we exploit the above advancements to develop a query system for the visually impaired utilizing a panoramic camera and a smartphone. We propose three designs for such a system: the first is a handheld device, and the second and third are wearable backpack and ring. In all three cases, the user interacts with our systems verbally regarding whereabouts of objects of interest. We exploit deep learning methods to train our system to recognize objects of interest. Accuracy of our system for the disjoint test data from the same buildings in the training set is 99%, and for test data from new buildings not present in the training data set is 53%.},
-  html={https://link.springer.com/chapter/10.1007/978-3-030-58796-3_59},
-  pdf={http://www-video.eecs.berkeley.edu/papers/lyang/Indoor_Query_System_For_The_Visually_Impaired.pdf}
-}
 
-@article{lizhi2022drone,
-abbr={Elec. Img.},
-  title={Drone object detection using RGB/IR fusion},
-  author={Yang, Lizhi and Ma, Ruhang and Zakhor, Avideh},
-  journal={Electronic Imaging},
-  volume={34},
-  pages={1--6},
-  year={2022},
-  publisher={Society for Imaging Science and Technology},
-  abstract={Object detection using aerial drone imagery has received a great deal of attention in recent years. While visible light images are adequate for detecting objects in most scenarios, thermal cameras can extend the capabilities of object detection to night-time or occluded objects. As such, RGB and Infrared (IR) fusion methods for object detection are useful and important. One of the biggest challenges in applying deep learning methods to RGB/IR object detection is the lack of available training data for drone IR imagery, especially at night. In this paper, we develop several strategies for creating synthetic IR images using the AIRSim simulation engine and CycleGAN. Furthermore, we utilize an illumination-aware fusion framework to fuse RGB and IR images for object detection on the ground. We characterize and test our methods for both simulated and actual data. Our solution is implemented on an NVIDIA Jetson Xavier running on an actual drone, requiring about 28 milliseconds of processing per RGB/IR image pair.},
-  html={https://doi.org/10.2352/EI.2022.34.14.COIMG-179},
-  pdf={https://arxiv.org/pdf/2201.03786.pdf}
-}
 
-@INPROCEEDINGS{yang2022bayesian,
-  abbr={ICRA},
-  title={Bayesian Optimization Meets Hybrid Zero Dynamics: Safe Parameter Learning for Bipedal Locomotion Control},
-  author={Yang, Lizhi and Li, Zhongyu and Zeng, Jun and Sreenath, Koushil},
-  booktitle={2022 IEEE International Conference on Robotics and Automation (ICRA)}, 
-  year={2022},
-  abstract={In this paper, we propose a multi-domain control parameter learning framework that combines Bayesian Optimization (BO) and Hybrid Zero Dynamics (HZD) for locomotion control of bipedal robots. We leverage BO to learn the control parameters used in the HZD-based controller. The learning process is firstly deployed in simulation to optimize different control parameters for a large repertoire of gaits. Next, to tackle the discrepancy between the simulation and the real world, the learning process is applied on the physical robot to learn for corrections to the control parameters learned in simulation while also respecting a safety constraint for gait stability. This method empowers an efficient sim-to-real transition with a small number of samples in the real world, and does not require a valid controller to initialize the training in simulation. Our proposed learning framework is experimentally deployed and validated on a bipedal robot Cassie to perform versatile locomotion skills with improved performance on smoothness of walking gaits and reduction of steady-state tracking errors.},
-  selected={true},
-  html={https://arxiv.org/abs/2203.02570},
-  pdf={https://arxiv.org/pdf/2203.02570.pdf}
-}
 
-@article{zixian2022sensor,
-abbr={Elec. Img.},
-  title={Sensor-aware frontier exploration and mapping with application to thermal mapping of building interiors},
-  author={Zang, Zixian and Shen, Haotian and Yang, Lizhi and  Zakhor, Avideh},
-  journal={Electronic Imaging},
-  volume={34},
-  pages={1--5},
-  year={2022},
-  publisher={Society for Imaging Science and Technology},
-  abstract={The combination of simultaneous localization and mapping(SLAM) and frontier exploration enables a robot to traverse and map an unknown area autonomously. Most prior autonomous SLAM solutions utilize information only from depth sensing devices. However, in situations where the main goal is to collect data from auxiliary sensors such as thermal camera, existing approaches require two passes: one pass to create a map of the environment and another to collect the auxiliary data, which is both time consuming and energy inefficient. We propose a sensor-aware frontier exploration algorithm that enables the robot to perform map construction and auxiliary data collection in one pass. Specifically, our method uses a realtime ray tracing technique to construct a map that encodes unvisited locations from the perspective of auxiliary sensors rather than depth sensors; this encourages the robot to fully explore those areas to complete the data collection task and map making in one pass. Our proposed exploration framework is deployed on a LoCoBot with the task to collect thermal images from building envelopes. We validate with experiments in a multi-room commercial building. Using a metric that evaluates the coverage of sensor data, our method significantly outperforms the baseline method with a naive SLAM algorithm. The code can be found at https://github.com/lzyang2000/herox},
-  html={https://library.imaging.org/ei/articles/34/16/AVM-117},
-  pdf={https://library.imaging.org/admin/apis/public/api/sandbox/website/downloadArticle/ei/34/16/AVM-117}
-}
+

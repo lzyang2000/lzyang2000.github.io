@@ -6,27 +6,28 @@
     # - name: Date of Birth
     #   value: 14th March 1879
     - name: Languages
-      value: English, Chinese
-
+      value: English (Fluent), Mandarin (Native)
 - title: Education
   type: time_table
   contents:
     - title: PhD student, Mechanical Engineering, <a href="https://www.caltech.edu/">California Institute of Technology</a>
       year: Expected 2027
+    - title: M.S., Mechanical Engineering, <a href="https://www.caltech.edu/">California Institute of Technology</a>
+      year: 2024
     - title: B.S. Electrical Engineering & Computer Sciences, <a href="https://www.universityofcalifornia.edu/">University of California, Berkeley</a>
       year: 2022
-      description:
-        - 'GPA: 3.874'
+      # description:
+      #   - 'GPA: 3.874'
 
 - title: Summary of Research Skills
   type: time_table
   contents:
-    - title: ROS , python , C++ , PyTorch , Tensorflow , Docker , optimization (Casadi) , project management , data collection , data management
+    - title: Robotics systems development, reinforcement learning, optimization, robot safety filters, robot simulation, perception-enabled control, computer vision, ROS, C++, Python, PyTorch
 
 - title: Research Interests
   type: time_table
   contents:
-    - title: Legged robotics , robot learning , robotic sensing & locomotion , multi‐robot cooperation , computer vision , sensor fusion
+    - title: Legged robotics, robot safety, reinforcement learning, perception-enabled control, multi-robot cooperation
 
 - title: Awards and Honors
   type: time_table
@@ -38,25 +39,39 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Undergraduate Researcher, <a href="https://www.universityofcalifornia.edu/">University of California, Berkeley</a>
-      year: 05/2019–08/2022
+    - title: Ph.D. Candidate, <a href="https://www.caltech.edu/">California Institute of Technology</a>
+      year: 2022–Present
+      description:
+        - 'Worked on legged robotics in <a href="http://www.bipedalrobotics.com/">AMBER Lab</a> under <a href=https://mce.caltech.edu/people/adames">Prof. Aaron D. Ames</a>.'
+        - 'Designed reinforcement learning and hardware deployment pipeline for humanoid robots, enabling real-world experiments.'
+        - 'Developed methods to enforce safety in learned control and planning policies, improving robustness of autonomous systems.'
+        - 'Created push-recovery and uncertainty-aware locomotion frameworks, validated on humanoid platforms.'
+
+    - title: Student Research Assistant, <a href="https://www.universityofcalifornia.edu/">University of California, Berkeley</a>
+      year: 2019–2022
       description:
         - 'Worked on legged robotics in <a href="https://hybrid-robotics.berkeley.edu/">Hybrid Robotics Group</a> under <a href="https://me.berkeley.edu/people/koushil-sreenath/">Prof. Koushil Sreenath</a>.'
         - 'Worked on computer vision in <a href="https://www-video.eecs.berkeley.edu/">Video and Image Processing Lab</a> under <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/zakhor.html">Prof. Avideh Zakhor</a>.'
+        - 'Conducted robotics research on locomotion, perception, and multi-robot collaboration, with deployments on Unitree A1 and MIT Mini Cheetah.'
+        - 'Built multi-robot system frameworks integrating LiDAR and depth sensing for collaborative load-moving tasks.'
+        - 'Developed simulation environments for testing robotic algorithms and control strategies.'
+        - 'Applied reinforcement learning (PPO) and Bayesian optimization for locomotion control, improving stability and adaptability.'
 
-    - title: Firmware Engineer Intern, <a href="https://www.samsara.com/">Samsara Inc.</a>
-      year: 05/2021–08/2021
+    - title: Software Engineering Intern, <a href="https://www.samsara.com/">Samsara Inc.</a>
+      year: 2021
       description:
-        - 'Worked on embedded computer vision systems.'
-    
+        - 'Delivered production features in a 4-person engineering team, contributing to fleet management products.'
+        - 'Built machine learning benchmarking tools to compare models at scale, improving workflow efficiency for ML engineers.'
+        - 'Leveraged C++ and Go for backend development and performance optimization.'
+
     - title: Project Manager, <a href="https://pioneers.berkeley.edu/">Pioneers in Engineering PiSens</a>
-      year: 05/2019–05/2020
+      year: 2019–2020
       description:
         - 'Lead a team to develop new sensor kits for low-cost robot competitions.'
         - 'Participated in organizing annual robot competitions for the under‐represented and low‐income students in the Bay Area.'
 
     - title: Outreach Director, <a href="https://ieee.berkeley.edu/">UC Berkeley IEEE</a>
-      year: 05/2019–01/2020
+      year: 2019–2020
       description:
         - 'Planned and hosted professional and educational outreach events.'
 

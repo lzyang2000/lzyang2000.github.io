@@ -1,6 +1,19 @@
 "ICRA":
   url: https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra
   # color: "#00369f"
+
+"IROS":
+  url: https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros
+  # color: "#00369f"
+
+"CoRL":
+  url: https://www.robot-learning.org/
+  # color: "#00369f"
+
+"Humanoids":
+  url: https://www.ieee-ras.org/conferences-workshops/fully-sponsored/humanoids
+  # color: "#00369f"
+
 "Elec. Img.":
   url: https://www.imaging.org/
   # color: "#00369f"
@@ -14,3 +27,7 @@
 
 # "PhysRev":
 #   url: https://journals.aps.org/
+
+"RA-L":
+  url: https://www.ieee-ras.org/publications/ra-l
+  # color: "#00369f"

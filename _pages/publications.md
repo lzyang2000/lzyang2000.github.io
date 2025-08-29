@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: My contributions to the field of robotics.
 years: [2022, 2021, 2020]
 nav: true
