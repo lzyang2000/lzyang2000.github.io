@@ -10,7 +10,7 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD student, Mechanical Engineering, <a href="https://www.caltech.edu/">California Institute of Technology</a>
+    - title: Ph.D. candidate, Mechanical Engineering, <a href="https://www.caltech.edu/">California Institute of Technology</a>
       year: Expected 2027
     - title: M.S., Mechanical Engineering, <a href="https://www.caltech.edu/">California Institute of Technology</a>
       year: 2024
@@ -22,12 +22,12 @@
 - title: Summary of Research Skills
   type: time_table
   contents:
-    - title: Robotics systems development, reinforcement learning, optimization, robot safety filters, robot simulation, perception-enabled control, computer vision, ROS, C++, Python, PyTorch
+    - title: Robotics systems development, reinforcement learning, robot safety filters, robot simulation, perception-enabled control, computer vision, ROS, C++, Python, PyTorch
 
 - title: Research Interests
   type: time_table
   contents:
-    - title: Legged robotics, robot safety, reinforcement learning, perception-enabled control, multi-robot cooperation
+    - title: Lco-manipulation, robot safety, reinforcement learning, perception-enabled control, multi-robot cooperation
 
 - title: Awards and Honors
   type: time_table
@@ -42,10 +42,11 @@
     - title: Ph.D. Candidate, <a href="https://www.caltech.edu/">California Institute of Technology</a>
       year: 2022–Present
       description:
-        - 'Worked on legged robotics in <a href="http://www.bipedalrobotics.com/">AMBER Lab</a> under <a href=https://mce.caltech.edu/people/adames">Prof. Aaron D. Ames</a>.'
+        - 'Worked on humanoids and robot manipulation in <a href="http://www.bipedalrobotics.com/">AMBER Lab</a> under <a href=https://mce.caltech.edu/people/adames">Prof. Aaron D. Ames</a>.'
         - 'Designed reinforcement learning and hardware deployment pipeline for humanoid robots, enabling real-world experiments.'
         - 'Developed methods to enforce safety in learned control and planning policies, improving robustness of autonomous systems.'
         - 'Created push-recovery and uncertainty-aware locomotion frameworks, validated on humanoid platforms.'
+        - 'Built framework for data collection, finetuning and deployment of VLA models.'
 
     - title: Student Research Assistant, <a href="https://www.universityofcalifornia.edu/">University of California, Berkeley</a>
       year: 2019–2022
