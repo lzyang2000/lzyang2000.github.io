@@ -1,10 +1,53 @@
 ---
 ---
+@article{yang2026safesage,
+  title={Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions},
+  author={Yang, Lizhi and Bena, Ryan M. and Wilkinson, Meg and Bahati, Gilbert and Navarro Brenes, Andy and Cosner, Ryan K. and Ames, Aaron D.},
+  journal={arXiv preprint arXiv:2603.05497},
+  year={2026},
+  abstract={Traditional safety-critical control methods, such as control barrier functions, suffer from semantic blindness, exhibiting the same behavior around obstacles regardless of contextual significance. This limitation leads to the uniform treatment of all obstacles, despite their differing semantic meanings. We present Safe-SAGE (Social-Semantic Adaptive Guidance for Safe Engagement), a unified framework that bridges the gap between high-level semantic understanding and low-level safety-critical control through a Poisson safety function (PSF) modulated using a Laplace guidance field. Our approach perceives the environment by fusing multi-sensor point clouds with vision-based instance segmentation and persistent object tracking to maintain up-to-date semantics beyond the camera's field of view. A multi-layer safety filter is then used to modulate system inputs to achieve safe navigation using this semantic understanding of the environment. This safety filter consists of both a model predictive control layer and a control barrier function layer. Both layers utilize the PSF and flux modulation of the guidance field to introduce varying levels of conservatism and multi-agent passing norms for different obstacles in the environment. Our framework enables legged robots to safely navigate semantically rich, dynamic environments with context-dependent safety margins.},
+  abbr={arXiv},
+  pdf={https://arxiv.org/pdf/2603.05497.pdf},
+  selected={true},
+  video={https://youtu.be/WS6Y-s8wpZU}
+}
+
+@article{dai2026walk,
+  title={Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds},
+  author={Dai, Min and Compton, William D. and Li, Junheng and Yang, Lizhi and Ames, Aaron D.},
+  journal={arXiv preprint arXiv:2601.06286},
+  year={2026},
+  abstract={Bipedal humanoid robots must precisely coordinate balance, timing, and contact decisions when locomoting on constrained footholds such as stepping stones, beams, and planks -- even minor errors can lead to catastrophic failure. Classical optimization and control pipelines handle these constraints well but depend on highly accurate mathematical representations of terrain geometry, making them prone to error when perception is noisy or incomplete. Meanwhile, reinforcement learning has shown strong resilience to disturbances and modeling errors, yet end-to-end policies rarely discover the precise foothold placement and step sequencing required for discontinuous terrain. These contrasting limitations motivate approaches that guide learning with physics-based structure rather than relying purely on reward shaping. In this work, we introduce a locomotion framework in which a reduced-order stepping planner supplies dynamically consistent motion targets that steer the RL training process via Control Lyapunov Function (CLF) rewards. This combination of structured footstep planning and data-driven adaptation produces accurate, agile, and hardware-validated stepping-stone locomotion on a humanoid robot, substantially improving reliability compared to conventional model-free reinforcement-learning baselines.},
+  abbr={arXiv},
+  pdf={https://arxiv.org/pdf/2601.06286.pdf},
+  website={https://caltech-amber.github.io/planc/}
+}
+
+@article{mestres2025explicit,
+  title={Explicit Control Barrier Function-based Safety Filters and their Resource-Aware Computation},
+  author={Mestres, Pol and Mousavi, Shima Sadat and Ong, Pio and Yang, Lizhi and Das, Ersin and Burdick, Joel W. and Ames, Aaron D.},
+  journal={arXiv preprint arXiv:2512.10118},
+  year={2025},
+  abstract={This paper studies the efficient implementation of safety filters that are designed using control barrier functions (CBFs), which minimally modify a nominal controller to render it safe with respect to a prescribed set of states. Although CBF-based safety filters are often implemented by solving a quadratic program (QP) in real time, the use of off-the-shelf solvers for such optimization problems poses a challenge in applications where control actions need to be computed efficiently at very high frequencies. In this paper, we introduce a closed-form expression for controllers obtained through CBF-based safety filters. This expression is obtained by partitioning the state-space into different regions, with a different closed-form solution in each region. We leverage this formula to introduce a resource-aware implementation of CBF-based safety filters that detects changes in the partition region and uses the closed-form expression between changes. We showcase the applicability of our approach in examples ranging from aerospace control to safe reinforcement learning.},
+  abbr={arXiv},
+  pdf={https://arxiv.org/pdf/2512.10118.pdf}
+}
+
+@article{werner2025architecture,
+  title={Architecture Is All You Need: Diversity-Enabled Sweet Spots for Robust Humanoid Locomotion},
+  author={Werner, Blake and Yang, Lizhi and Ames, Aaron D.},
+  journal={arXiv preprint arXiv:2510.14947},
+  year={2025},
+  abstract={Robust humanoid locomotion in unstructured environments requires architectures that balance fast low-level stabilization with slower perceptual decision-making. We show that a simple layered control architecture (LCA), a proprioceptive stabilizer running at high rate, coupled with a compact low-rate perceptual policy, enables substantially more robust performance than monolithic end-to-end designs, even when using minimal perception encoders. Through a two-stage training curriculum (blind stabilizer pretraining followed by perceptual fine-tuning), we demonstrate that layered policies consistently outperform one-stage alternatives in both simulation and hardware. On a Unitree G1 humanoid, our approach succeeds across stair and ledge tasks where one-stage perceptual policies fail. These results highlight that architectural separation of timescales, rather than network scale or complexity, is the key enabler for robust perception-conditioned locomotion.},
+  abbr={arXiv},
+  pdf={https://arxiv.org/pdf/2510.14947.pdf}
+}
+
 @article{yang2025cbf,
   title={CBF-RL: Safety Filtering Reinforcement Learning in Training with Control Barrier Functions},
   author={Yang, Lizhi and Werner, Blake and de Sa, Massimiliano and Ames, Aaron D},
   booktitle={2026 IEEE International Conference on Robotics and Automation (ICRA)}, 
-  year={2026 (To appear)},
+  year={2026},
   abstract={Reinforcement learning (RL), while powerful and expressive, can often prioritize performance at the expense of safety. Yet safety violations can lead to catastrophic outcomes in real-world deployments. Control Barrier Functions (CBFs) offer a principled method to enforce dynamic safety -- traditionally deployed online via safety filters. While the result is safe behavior, the fact that the RL policy does not have knowledge of the CBF can lead to conservative behaviors. This paper proposes CBF-RL, a framework for generating safe behaviors with RL by enforcing CBFs in training. CBF-RL has two key attributes: (1) minimally modifying a nominal RL policy to encode safety constraints via a CBF term, (2) and safety filtering of the policy rollouts in training. Theoretically, we prove that continuous-time safety filters can be deployed via closed-form expressions on discrete-time roll-outs. Practically, we demonstrate that CBF-RL internalizes the safety constraints in the learned policy -- both enforcing safer actions and biasing towards safer rewards -- enabling safe deployment without the need for an online safety filter. We validate our framework through ablation studies on navigation tasks and on the Unitree G1 humanoid robot, where CBF-RL enables safer exploration, faster convergence, and robust performance under uncertainty, enabling the humanoid robot to avoid obstacles and climb stairs safely in real-world settings without a runtime safety filter.},
   pdf={https://arxiv.org/pdf/2510.14959.pdf},
   selected={true},

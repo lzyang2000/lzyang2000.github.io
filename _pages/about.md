@@ -28,7 +28,7 @@ latest_posts:
 nav_order: 1
 ---
 
-Hello there! My name is Lizhi Yang. I am currently a Mechanical Engineering PhD candidate at Caltech [AMBER Lab](http://www.bipedalrobotics.com/) under the advisement of [Prof. Aaron D. Ames](https://mce.caltech.edu/people/adames). My research interests are in **learning for robotics**, **control** and **robot safety**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). I have also worked at [Samsara Inc](https://www.samsara.com/). In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
+Hello there! My name is Lizhi Yang. I am currently a Mechanical Engineering PhD candidate at Caltech [AMBER Lab](http://www.bipedalrobotics.com/) under the advisement of [Prof. Aaron D. Ames](https://mce.caltech.edu/people/adames). My research interests are in **learning for robotics**, **loco-manipulation** and **robot safety**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). I have also worked at [Samsara Inc](https://www.samsara.com/). In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
 <div style="display: flex; justify-content: center; align-items: center; gap: 2em; margin: 1.5em 0;">
   <a href="https://caltech.edu" target="_blank" rel="noopener">
     <img src="/assets/img/caltech.png" alt="Caltech" style="max-width: 280px; height: auto;">
