@@ -42,12 +42,11 @@
     - title: Ph.D. Candidate, <a href="https://www.caltech.edu/">California Institute of Technology</a>
       year: 2022–Present
       description:
-        - 'Worked on humanoids and robot manipulation in <a href="http://www.bipedalrobotics.com/">AMBER Lab</a> under <a href=https://mce.caltech.edu/people/adames">Prof. Aaron D. Ames</a>.'
+        - 'Worked on humanoids and robot manipulation in <a href="http://www.bipedalrobotics.com/">AMBER Lab</a> under <a href="https://mce.caltech.edu/people/adames">Prof. Aaron D. Ames</a>.'
         - 'Designed reinforcement learning and hardware deployment pipeline for humanoid robot whole-body control, enabling real-world experiments.'
-         - 'Built framework for data collection, finetuning and deployment of VLA models.'
+        - 'Built framework for data collection, finetuning and deployment of VLA models.'
         - 'Developed methods to enforce safety in learned control and planning policies, improving robustness of autonomous systems.'
         - 'Created push-recovery and uncertainty-aware locomotion frameworks, validated on humanoid platforms.'
-       
 
     - title: Student Research Assistant, <a href="https://www.universityofcalifornia.edu/">University of California, Berkeley</a>
       year: 2019–2022
