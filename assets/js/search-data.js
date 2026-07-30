@@ -44,4 +44,7 @@ ninja.data = [{
           section: "News",},{id: "news-our-contribution-cbf-rl-safety-filtering-reinforcement-learning-in-training-with-control-barrier-functions-is-going-to-appear-at-icra-2026",
           title: 'Our contribution CBF-RL: Safety Filtering Reinforcement Learning in Training with Control Barrier Functions...',
           description: "",
+          section: "News",},{id: "news-our-contribution-safe-sage-social-semantic-adaptive-guidance-for-safe-engagement-through-laplace-modulated-poisson-safety-functions-is-going-to-appear-at-iros-2026",
+          title: 'Our contribution Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety...',
+          description: "",
           section: "News",},];
