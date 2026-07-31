@@ -1,5 +1,28 @@
 ---
 ---
+@misc{yang2026pacman,
+      title={PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball}, 
+      author={Yang, Lizhi and Li, Junheng and Ames, Aaron D.},
+      year={2026},
+      abstract={We present PAC-MAN, a perception-aware CBF-RL framework that couples control-barrier safety with deployment-realistic onboard sensing for whole-body humanoid dodgeball. The deployed policy sees the ball only as segmentation-masked depth from a head-mounted camera, while training-time CBF guidance represents clearance to every body link, and an adversarial motion prior regularizes the resulting evasive reflexes. We evaluate on a controlled any-link contact benchmark with seeded throws in two regimes: single throws and a deployment loop in which the robot walks back to its station and recovers between throws. On this benchmark, the policy comes within a few points of a privileged state oracle: a fixed onboard camera alone is adequate for evasion. We find that usable barrier structure depends on perceptual observability: Joint-CBF gives the best performance with accurate ball states, degrades under fixed-camera observations when used only as training guidance, and recovers with a ball-tracking gimbal or privileged runtime filter. We therefore deploy a lightweight Link-CBF policy zero-shot on the Unitree G1 in the real world, where it tolerates imperfect perception, succeeds on 95% of throws, and uses semantic segmentation to dodge different balls.},
+      pdf={https://arxiv.org/pdf/2607.28623},
+      code={https://github.com/lzyang2000/perceptive_cbf_rl/},
+      selected={true},
+      video={https://youtu.be/Dcq5RWf62fw},
+      website={https://lzyang2000.github.io/perceptive_cbf_rl/},
+      abbr={arXiv},
+}
+
+@article{li2026accelerating,
+  title={Accelerating and Scaling MPC-Guided Reinforcement Learning for Humanoid Locomotion and Manipulation},
+  author={Li, Junheng and Wu, Liang and Esteban, Sergio A and Yang, Lizhi and Drgo{\v{n}}a, J{\'a}n and Ames, Aaron D},
+  year={2026},
+  abstract={In humanoid motion control, model predictive control (MPC) offers physically grounded prediction and constraint handling, while reinforcement learning (RL) enables robust whole-body skills through large-scale simulation. However, using MPC inside RL often requires time-consuming problem construction or excessive training overhead, making such frameworks difficult to justify in practice. This work studies efficient training-time MPC guidance for humanoid locomotion and manipulation, termed MPC-RL. We introduce a centroidal-dynamics MPC reward formulation that leverages guidance from MPC trajectories in training time. To make this practical in massively parallel RL, we develop πnMPC, a parallel-in-horizon and construction-free batched GPU MPC solver that operates directly on time-varying dynamics to avoid high memory usage and pre-compilation. Through a variety of comparative studies and hardware validations, we have found that MPC-RL achieves superior performance in locomotion and manipulation skills.},
+  pdf={https://arxiv.org/pdf/2606.05687},
+  code={https://github.com/junhengl/mpc-rl},
+  abbr={arXiv},
+}
+
 @article{yang2026handoff,
   title={HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers},
   author={Yang, Lizhi and Li, Junheng and Poddar, Nehar and Hou, Yiling and Huh, Gio and Griffin, Robert and Gkioxari, Georgia and Ames, Aaron D.},
