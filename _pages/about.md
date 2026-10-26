@@ -7,14 +7,13 @@ subtitle: Talent is given, greatness is earned.
 profile:
   align: right
   image: prof_pic.jpg
-  image_cicular: false # crops the image to make it circular
-  address: >
+  image_circular: false # crops the image to make it circular
+  more_info: >
     <p>1200 E California Blvd</p>
     <p>MC 104-44</p>
     <p>Pasadena, CA 91125</p>
-news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -29,12 +28,12 @@ nav_order: 1
 ---
 
 Hello there! My name is Lizhi Yang. I am currently a Mechanical Engineering PhD candidate at Caltech [AMBER Lab](http://www.bipedalrobotics.com/) under the advisement of [Prof. Aaron D. Ames](https://mce.caltech.edu/people/adames). My research interests are in **learning for robotics**, **loco-manipulation** and **robot safety**. Apart from my research, I am engaged in STEM outreach, and was involved in groups such as [Pioneers in Engineering](https://pioneers.berkeley.edu/). I have also worked at [Samsara Inc](https://www.samsara.com/). In life I am a tech enthusiast and sci-fi lover. If you are interested in talking with me, please feel free to contact me at the email at the bottom of the page!
-<div style="display: flex; justify-content: center; align-items: center; gap: 2em; margin: 1.5em 0;">
+<div class="affiliations">
   <a href="https://caltech.edu" target="_blank" rel="noopener">
-    <img src="/assets/img/caltech.png" alt="Caltech" style="max-width: 280px; height: auto;">
+    <img src="/assets/img/caltech.png" alt="Caltech">
   </a>
   <a href="http://www.bipedalrobotics.com/" target="_blank" rel="noopener">
-    <img src="/assets/img/AMBER_black.svg" alt="AMBER" style="max-width: 280px; height: auto;">
+    <img src="/assets/img/AMBER_black.svg" alt="AMBER">
   </a>
 </div>
 

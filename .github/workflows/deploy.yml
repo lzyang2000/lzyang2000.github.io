@@ -7,8 +7,6 @@ on:
       - main
     paths:
       - "assets/**"
-      - "_sass/**"
-      - "_scripts/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -17,6 +15,10 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
+      - "test/**"
+      - ".al-folio-overrides.yml"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -36,8 +38,6 @@ on:
       - main
     paths:
       - "assets/**"
-      - "_sass/**"
-      - "_scripts/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -46,6 +46,10 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
+      - "test/**"
+      - ".al-folio-overrides.yml"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -74,8 +78,17 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: "3.3"
           bundler-cache: true
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - name: Install browser test dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
@@ -88,16 +101,18 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Check migration contract
+        run: |
+          bundle exec al-folio upgrade audit
+          bundle exec al-folio upgrade overrides audit
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
-      - name: Purge unused CSS 🧹
-        run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+      - name: Verify desktop and mobile pages
+        run: npm run test:site -- --workers=2
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
