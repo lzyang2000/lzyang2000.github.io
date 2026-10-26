@@ -24,7 +24,8 @@ test("home preserves biography, selected publications, news and contact links", 
   await expect(page.locator(".contact-icons a[href*='jEf5Q-4AAAAJ']")).toBeVisible();
   await expect(page.locator(".contact-icons a[href*='linkedin.com/in/lzyang']")).toBeVisible();
   await expect(page.locator(".contact-icons a[href^='mailto:']")).toHaveCount(1);
-  await expect(page.locator("#search-toggle, #light-toggle")).toHaveCount(0);
+  await expect(page.locator("#search-toggle")).toHaveCount(0);
+  await expect(page.locator("#light-toggle")).toHaveCount(1);
   expect(await page.locator(":root").evaluate((el) => getComputedStyle(el).getPropertyValue("--global-theme-color").trim())).toBe("#0076df");
   for (const image of await page.locator(".profile img, .affiliations img").all()) {
     await expect.poll(() => image.evaluate((el) => el.complete && el.naturalWidth > 0)).toBe(true);

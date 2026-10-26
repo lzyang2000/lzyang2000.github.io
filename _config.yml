@@ -7,12 +7,14 @@ first_name: Lizhi
 middle_name:
 last_name: Yang
 contact_note: I check my email daily (I promise).
-description: All about Lizhi Yang
+description: >-
+  Lizhi Yang is a Mechanical Engineering PhD candidate at Caltech researching
+  robot learning, loco-manipulation, and robot safety.
 footer_text: ""
 keywords: lizhi, yang, robotics, control, research, machine learning, tech
 lang: en
-icon: 🤖
-apple_touch_icon:
+icon: ly-favicon.ico
+apple_touch_icon: ly-apple-touch-icon.png
 
 url: https://lzyang2000.github.io
 baseurl: ""
@@ -75,7 +77,7 @@ footer_fixed: true
 search_enabled: false
 socials_in_search: false
 posts_in_search: false
-bib_search: false
+bib_search: true
 
 # Dimensions
 max_width: 930px
@@ -85,9 +87,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false
+serve_og_meta: true
 serve_schema_org: false
-og_image:
+og_image: /assets/img/ly-logo.png
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -363,7 +365,7 @@ enable_cookie_consent: false
 enable_masonry: true
 enable_math: true
 enable_tooltips: false
-enable_darkmode: false
+enable_darkmode: true
 enable_navbar_social: false
 enable_project_categories: true
 enable_medium_zoom: true
