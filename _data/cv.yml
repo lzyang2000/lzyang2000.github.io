@@ -5,85 +5,104 @@ cv:
         details: Lizhi Yang
       - label: Languages
         details: English (Fluent), Mandarin (Native)
-    Education:
-      - studyType: Ph.D. candidate, Mechanical Engineering, <a href="https://www.caltech.edu/">California
-          Institute of Technology</a>
-        date: Expected 2027
-      - studyType: M.S., Mechanical Engineering, <a href="https://www.caltech.edu/">California
-          Institute of Technology</a>
-        date: "2024"
-      - studyType: B.S. Electrical Engineering & Computer Sciences, <a href="https://www.universityofcalifornia.edu/">University
-          of California, Berkeley</a>
-        date: "2022"
-    Summary of Research Skills:
-      - bullet: Robotics systems development, reinforcement learning, robot safety filters,
-          robot simulation, perception-enabled control, computer vision, ROS, C++, Python,
-          PyTorch
     Research Interests:
-      - bullet: Loco-manipulation, robot safety, whole-body control, perception-enabled
-          control
-    Awards and Honors:
-      - bullet: <a href="https://www2.eecs.berkeley.edu/Students/Awards/9/">Arthur M.
-          Hopkin Award</a> — (2022) — Selected based on seriousness of purpose and high
-          academic achievement.
-    Experience:
-      - position: Ph.D. Candidate, <a href="https://www.caltech.edu/">California Institute
-          of Technology</a>
+      - bullet: My research aims to create robust, safe, and intelligent robotic systems that operate reliably in the real world. I focus on loco-manipulation, robot safety, whole-body control, and perception-enabled control.
+    Education:
+      - institution: California Institute of Technology
+        studyType: Ph.D. Candidate, Mechanical Engineering
+        area: Robotics, Controls, and Dynamics
+        url: https://www.caltech.edu/
+        location: Pasadena, CA
+        start_date: "2022-09"
+        end_date: Present
         highlights:
-          - Worked on humanoids and robot manipulation in <a href="http://www.bipedalrobotics.com/">AMBER
-            Lab</a> under <a href="https://mce.caltech.edu/people/adames">Prof. Aaron
-            D. Ames</a>.
-          - Designed reinforcement learning and hardware deployment pipeline for humanoid
-            robot whole-body control, enabling real-world experiments.
-          - Built framework for data collection, finetuning and deployment of VLA models.
-          - Developed methods to enforce safety in learned control and planning policies,
-            improving robustness of autonomous systems.
-          - Created push-recovery and uncertainty-aware locomotion frameworks, validated
-            on humanoid platforms.
+          - Expected 2027
+      - institution: California Institute of Technology
+        studyType: M.S., Mechanical Engineering
+        url: https://www.caltech.edu/
+        location: Pasadena, CA
+        date: "2024-06"
+      - institution: University of California, Berkeley
+        studyType: B.S., Electrical Engineering and Computer Sciences
+        url: https://www.berkeley.edu/
+        location: Berkeley, CA
+        date: "2022-05"
+    Technical Skills:
+      - bullet: Robotics systems development, reinforcement learning, robot safety filters, robot simulation, perception-enabled control, and computer vision.
+      - bullet: Python, C++, Go, PyTorch, and ROS.
+    Experience:
+      - company: California Institute of Technology
+        position: Ph.D. Candidate
+        url: https://www.caltech.edu/
+        location: Pasadena, CA
         start_date: "2022"
         end_date: Present
-      - position: Student Research Assistant, <a href="https://www.universityofcalifornia.edu/">University
-          of California, Berkeley</a>
         highlights:
-          - Worked on legged robotics in <a href="https://hybrid-robotics.berkeley.edu/">Hybrid
-            Robotics Group</a> under <a href="https://me.berkeley.edu/people/koushil-sreenath/">Prof.
-            Koushil Sreenath</a>.
-          - Worked on computer vision in <a href="https://www-video.eecs.berkeley.edu/">Video
-            and Image Processing Lab</a> under <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/zakhor.html">Prof.
-            Avideh Zakhor</a>.
-          - Conducted robotics research on locomotion, perception, and multi-robot collaboration,
-            with deployments on Unitree A1 and MIT Mini Cheetah.
-          - Built multi-robot system frameworks integrating LiDAR and depth sensing for
-            collaborative load-moving tasks.
-          - Developed simulation environments for testing robotic algorithms and control
-            strategies.
-          - Applied reinforcement learning (PPO) and Bayesian optimization for locomotion
-            control, improving stability and adaptability.
+          - Developed [MorphMimic](https://lzyang2000.github.io/morphmimic/), sharing one morphology-conditioned world model and motion-tracking policy across Unitree G1, AgiBot X2 Ultra, and Booster T2. Achieved over 99.7% clip completion in simulation and deployed the shared policy on Unitree G1 for motion tracking and teleoperation.
+          - Developed [CSF](https://lzyang2000.github.io/csf/), a training-free contextual safety filter for text-conditioned motion generators that grounds natural-language safety rules in reference trajectories enforced through a CBF-QP. Validated on Unitree G1.
+          - Developed a mobile sensor deployment system using a quadrupedal mobile manipulator for autonomous sensor deployment in the wild.
+          - Built [HANDOFF](https://lzyang2000.github.io/HANDOFF/), a whole-body task-space controller and agentic planning pipeline that enables Unitree G1 to complete natural-language and vision-driven tasks without task-specific data collection.
+          - Developed [PAC-MAN](https://lzyang2000.github.io/perceptive_cbf_rl/), a perception-aware CBF-RL framework combining real-time vision and control barrier functions for safe whole-body humanoid dodgeball.
+          - Constructed social-semantic safety frameworks for mobile robots, validated on Unitree G1 and Go2.
+          - Developed pipelines for data collection, finetuning, and deployment of VLA models for Franka Emika.
+          - Designed reinforcement learning and hardware deployment pipelines for humanoid whole-body control.
+          - Developed methods to enforce safety in learned control and planning policies, improving robustness of autonomous systems.
+          - Created push-recovery and uncertainty-aware locomotion frameworks, validated on humanoid platforms.
+      - company: University of California, Berkeley
+        position: Student Research Assistant
+        url: https://www.berkeley.edu/
+        location: Berkeley, CA
         start_date: "2019"
         end_date: "2022"
-      - position: Software Engineering Intern, <a href="https://www.samsara.com/">Samsara
-          Inc.</a>
         highlights:
-          - Delivered production features in a 4-person engineering team, contributing
-            to fleet management products.
-          - Built machine learning benchmarking tools to compare models at scale, improving
-            workflow efficiency for ML engineers.
-          - Leveraged C++ and Go for backend development and performance optimization.
+          - Conducted research on locomotion, perception, and multi-robot collaboration, with deployments on Unitree A1 and MIT Mini Cheetah.
+          - Built multi-robot frameworks integrating LiDAR and depth sensing for collaborative load-moving tasks.
+          - Developed vision-based navigation and obstacle detection stacks in ROS for autonomous quadrupedal navigation.
+          - Applied reinforcement learning (PPO) and Bayesian optimization to locomotion control, improving stability and adaptability.
+      - company: Samsara Inc.
+        position: Software Engineering Intern
+        url: https://www.samsara.com/
+        location: San Francisco, CA
         date: "2021"
-      - position: Project Manager, <a href="https://pioneers.berkeley.edu/">Pioneers
-          in Engineering PiSens</a>
         highlights:
-          - Lead a team to develop new sensor kits for low-cost robot competitions.
-          - Participated in organizing annual robot competitions for the under‐represented
-            and low‐income students in the Bay Area.
-        start_date: "2019"
-        end_date: "2020"
-      - position: Outreach Director, <a href="https://ieee.berkeley.edu/">UC Berkeley
-          IEEE</a>
+          - Delivered production features in a four-person engineering team for fleet management products.
+          - Built machine learning benchmarking tools to compare models at scale and improve ML engineering workflows.
+          - Used C++ and Go for backend development and performance optimization.
+    Awards and Honors:
+      - bullet: "2025: Best Oral Presentation Finalist, International Conference on Humanoid Robots (Humanoids)."
+      - bullet: "2022: [Arthur M. Hopkin Award](https://www2.eecs.berkeley.edu/Students/Awards/9/), University of California, Berkeley."
+      - bullet: "2021: Best Service Robotics Paper Finalist, International Conference on Robotics and Automation (ICRA)."
+    Projects:
+      - name: "MorphMimic: World Model and Policy Sharing Across Humanoids"
+        url: https://lzyang2000.github.io/morphmimic/
+        date: "2026"
         highlights:
-          - Planned and hosted professional and educational outreach events.
-        start_date: "2019"
-        end_date: "2020"
-    Memberships:
-      - bullet: Institute of Electrical and Electronics Engineers — (2022–present) —
-          student member
+          - Shared one morphology-conditioned world model and motion-tracking policy across Unitree G1, AgiBot X2 Ultra, and Booster T2, completing over 99.7% of 128,786 clips on each robot in simulation.
+          - Deployed the shared policy on Unitree G1 hardware for motion tracking and teleoperation.
+      - name: Safe Learning with Control Barrier Functions
+        url: /publications/#yang2025cbf
+        start_date: "2025"
+        end_date: "2026"
+        highlights:
+          - Integrated control barrier functions into reinforcement learning training through in-training safety filtering and closed-form discrete-time constraints.
+          - Validated obstacle avoidance and stair climbing on Unitree G1 without a runtime safety filter; extended the framework to perception-aware humanoid dodgeball.
+          - Built a training-free contextual safety filter for text-conditioned humanoid motion generators.
+      - name: Agentic Loco-manipulation for Humanoid Robots
+        url: https://lzyang2000.github.io/HANDOFF/
+        date: "2026"
+        highlights:
+          - Developed an agentic planner and a teacher-student framework that distills complementary whole-body controllers for zero-shot loco-manipulation without task-specific demonstrations.
+          - Deployed on Unitree G1 for table-top sorting, object transport, and bimanual handling.
+    Publications:
+      - title: Publications and Preprints
+        url: /publications/
+        summary: Browse papers, project websites, code, and videos on the [Publications page](/publications/). The [full CV](/assets/pdf/CV.pdf) includes the academic publication list and equal-contribution designations.
+    Invited Talks:
+      - label: "2025, 2026"
+        details: "<em>From Performance to Safety: Bringing Robots Into the Real World</em>. Seminars hosted by Prof. Zackory Erickson at Carnegie Mellon University, Prof. Xiaobin Xiong at the University of Wisconsin-Madison, and Prof. Adam Wierman at the California Institute of Technology."
+    Academic Service:
+      - label: Reviewer
+        details: IEEE Transactions on Industrial Electronics (TIE), IEEE Transactions on Robot Learning (TRL), IEEE Robotics and Automation Letters (RA-L), IEEE International Conference on Robotics and Automation (ICRA), IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), and Frontiers in Robotics and AI.
+    Outreach and Community Service:
+      - label: Project Manager, Pioneers in Engineering PiSens, UC Berkeley
+        details: May 2019 - May 2020. Led a team developing sensor kits for low-cost robot competitions and organized annual competitions for underrepresented high school students in the Bay Area.

@@ -56,20 +56,37 @@ test("publications retain all entries and expand abstracts and author lists", as
 
 test("CV renders every section and links the existing PDF", async ({ page, request }) => {
   await page.goto("/cv/");
-  await expect(page.locator(".cv .card")).toHaveCount(7);
+  await expect(page.locator(".cv .card-title")).toHaveText([
+    "Experience",
+    "General Information",
+    "Research Interests",
+    "Education",
+    "Technical Skills",
+    "Awards and Honors",
+    "Projects",
+    "Publications",
+    "Invited Talks",
+    "Academic Service",
+    "Outreach and Community Service",
+  ]);
   for (const text of [
     "Expected 2027",
     "Arthur M. Hopkin Award",
-    "Summary of Research Skills",
-    "Memberships",
+    "MorphMimic",
+    "99.7%",
+    "Best Oral Presentation Finalist",
+    "Best Service Robotics Paper Finalist",
+    "From Performance to Safety: Bringing Robots Into the Real World",
+    "IEEE Transactions on Robot Learning",
     "English (Fluent), Mandarin (Native)",
   ]) {
     await expect(page.locator(".cv")).toContainText(text);
   }
-  await expect(page.locator("a[href='/assets/pdf/CV.pdf']")).toBeVisible();
+  await expect(page.locator(".post-header a[href='/assets/pdf/CV.pdf']")).toBeVisible();
   const pdf = await request.get("/assets/pdf/CV.pdf");
   expect(pdf.ok()).toBe(true);
   expect(pdf.headers()["content-type"]).toContain("application/pdf");
+  expect(await pdf.body()).toEqual(fs.readFileSync("assets/pdf/CV.pdf"));
 });
 
 test("full news retains every announcement", async ({ page }) => {
